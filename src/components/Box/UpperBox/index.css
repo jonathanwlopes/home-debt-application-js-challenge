@@ -1,0 +1,16 @@
+.wrapper-total-money{
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+}
+
+.upper-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent linear-gradient(114deg, #53a9ff 0%, #328de8 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+  width: 375px;
+  height: 170px;
+}

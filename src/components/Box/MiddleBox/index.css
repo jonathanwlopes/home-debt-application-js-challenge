@@ -1,0 +1,22 @@
+.wrapper-middle-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 65%;
+  overflow-y: scroll;
+  position: relative;
+  top: -20px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.middle-box {
+  width: 345px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #53a9ff69;
+  border-radius: 9px;
+  opacity: 1;
+  margin-bottom: 18px;
+}
