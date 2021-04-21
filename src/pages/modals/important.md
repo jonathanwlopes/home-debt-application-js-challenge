@@ -1,0 +1,1 @@
+import the modals with componet 'MiddleBox' div class 'wrapper-middle-box' on page.

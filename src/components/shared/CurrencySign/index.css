@@ -1,4 +1,4 @@
-.currency-sign-big {
+.title-currency-big {
   text-align: left;
   font-size: 22px;
   font-weight: 900;
@@ -7,7 +7,7 @@
   opacity: 1;
 }
 
-.currency-sign-middle {
+.title-currency-middle {
   text-align: left;
   font-size: 14px;
   font-weight: 900;
@@ -16,7 +16,7 @@
   opacity: 1;
 }
 
-.total-money {
+.title-money-big {
   text-align: left;
   font-size: 22px;
   letter-spacing: 0px;
@@ -24,7 +24,7 @@
   opacity: 1;
 }
 
-.half-money {
+.title-money-middle {
   font-size: 14px;
   width: 71px;
   height: 17px;
@@ -32,3 +32,9 @@
   color: #53a9ff;
   opacity: 1;
 }
+
+.negative {
+  color: #FF5353;
+  font-size: 33px;
+ }
+ 

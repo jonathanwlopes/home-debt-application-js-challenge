@@ -11,16 +11,18 @@
   justify-content: center;
 }
 
-.red{
-  background: transparent linear-gradient(137deg, #FF5353 0%, #DE5959 100%) 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 6px #00000029;
-opacity: 1;
+.red {
+  background: transparent linear-gradient(137deg, #ff5353 0%, #de5959 100%) 0%
+    0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
 }
 
-.purple{
-  background: transparent linear-gradient(141deg, #8053FF 0%, #6F49DB 100%) 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 6px #00000029;
-opacity: 1;
+.purple {
+  background: transparent linear-gradient(141deg, #8053ff 0%, #6f49db 100%) 0%
+    0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
 }
 
 .home-circle {

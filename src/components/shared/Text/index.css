@@ -1,25 +1,18 @@
 .title-big {
   height: 24px;
-  text-align: left;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 0px;
-  color: #53a9ff;
   opacity: 1;
-  text-align: center;
-  margin-top: 19px;
 }
 
 .title-middle {
-  text-align: left;
   font-size: 16px;
   font-weight: bold;
-  width: 57px;
-  height: 19px;
   letter-spacing: 0px;
-  color: #707070;
   opacity: 1;
   text-rendering: optimizeLegibility;
+  color: #707070;
 }
 
 .sub-title-middle {
@@ -27,15 +20,20 @@
   font-size: 14px;
   height: 17px;
   letter-spacing: 0px;
-  color: #707070;
   opacity: 1;
+ color: #707070;
 }
 
-.button-text {
-  font-size: 20px;
+.sub-title-small {
+  text-align: left;
+  font-size: 12px;
+  height: 17px;
   letter-spacing: 0px;
-  color: #ffffff;
   opacity: 1;
-  width: 97px;
-  height: 24px;
+ color: #707070;
+}
+
+
+.bold {
+  font-weight: bold;
 }
