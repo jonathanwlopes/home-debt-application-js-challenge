@@ -37,3 +37,9 @@
 .bold {
   font-weight: bold;
 }
+
+.header-text {
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #ffffff;
+}

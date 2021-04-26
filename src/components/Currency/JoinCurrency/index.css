@@ -1,3 +1,11 @@
+.join-currency-big {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 1rem;
+  width: 60%;
+}
+
 .join-currency {
   display: flex;
   flex-direction: column;

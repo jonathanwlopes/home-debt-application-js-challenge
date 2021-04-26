@@ -1,0 +1,10 @@
+.header-case-cost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 105px;
+  height: 48px;
+  background-color: #328DE8;
+  opacity: 1;
+  cursor: pointer;
+}

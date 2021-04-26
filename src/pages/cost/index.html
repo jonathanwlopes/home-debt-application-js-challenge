@@ -4,33 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/global.css" />
+
+    <!-- Global -->
+    <link rel="stylesheet" href="../../../global.css" />
+    <!-- End Global -->
+
+    <!-- Currency -->
+    <link
+      rel="stylesheet"
+      href="../../components/Currency/BoxCurrency/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/Currency/CurrencySign/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/Currency/JoinCurrency/index.css"
+    />
+    <!-- End Currency -->
+
+    <!-- Footer -->
+    <link rel="stylesheet" href="../../components/Footer/BoxFooter/index.css" />
+    <!-- End Footer -->
+
+    <!-- Header -->
+    <link rel="stylesheet" href="../../components/Header/BoxHeader/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/Header/CaseHeader/Income/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/Header/CaseHeader/Cost/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/Header/CaseHeader/Transfer/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/Header/CaseHeader/Selected/index.css"
+    />
+    <!-- End Header -->
+
+    <!-- Shared -->
+    <link rel="stylesheet" href="../../components/shared/Text/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Button/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Icon/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Circle/index.css" />
+    <!-- End Shared -->
+
+    <!-- Box Middle -->
+    <link rel="stylesheet" href="../../components/Box/BoxMiddle/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/Box/BoxCase/CaseMiddle/index.css"
+    />
+    <!-- End Box Middle -->
+
+    <!-- Keyboard -->
     <link rel="stylesheet" href="../../components/Keyboard/index.css" />
     <link
       rel="stylesheet"
       href="../../components/shared/KeyboardButton/index.css"
     />
-    <link rel="stylesheet" href="../../components/Box/UpperBox/index.css" />
-    <link rel="stylesheet" href="../../components/Box/MiddleBox/index.css" />
-    <link rel="stylesheet" href="../../components/Box/FlexBox/index.css" />
-    <link
-      rel="stylesheet"
-      href="../../components/shared/CurrencySign/index.css"
-    />
-    <link rel="stylesheet" href="../cost/styles.css" />
+    <!-- End Keyboard -->
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../../pages/cost/styles.css" />
+    <!-- End Page Styles -->
+
     <title>Cost</title>
   </head>
   <body>
     <main id="root">
-      <div class="upper-box">
-        <div class="wrapper-total-money">
-          <span class="currency-sign-big negative">R$</span>
-          <span class="total-money negative">100.000,00</span>
+      <div class="header-box">
+        <div class="header-case-income">
+          <span class="header-text">Receita</span>
+        </div>
+        <div class="header-case-cost selected">
+          <span class="header-text">Despesa</span>
+        </div>
+        <div class="header-case-transfer">
+          <span class="header-text">Transferência</span>
         </div>
       </div>
 
-      <div class="wrapper-middle-box">
-        <div class="flex-box">
+      <div class="currency-box">
+        <div class="join-currency-big">
+          <span class="title-currency-big negative">R$</span>
+          <span class="title-money-big negative">100.000,00</span>
+        </div>
+      </div>
+
+      <div class="middle-box">
+        <div class="case-middle">
           <div class="keyboard">
             <div class="keyboard-button">1</div>
             <div class="keyboard-button">2</div>
@@ -44,8 +113,16 @@
             <div class="keyboard-button">0</div>
             <img class="keyboard-icon-prop" src="../../img/excluir.png" />
           </div>
+          <button class="default-button">Continuar</button>
         </div>
-        <button class="default-button">Continuar</button>
+      </div>
+
+      <div class="footer-box">
+        <img class="icon" src="../../img/home.png" />
+        <img class="icon" src="../../img/statement.png" />
+        <div class="home-circle"></div>
+        <img class="icon" src="../../img/credit.png" />
+        <img class="icon" src="../../img/store.png" />
       </div>
     </main>
   </body>

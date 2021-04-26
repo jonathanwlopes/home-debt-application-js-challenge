@@ -1,0 +1,10 @@
+.header-case-transfer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 163px;
+  height: 48px;
+  background-color: #328DE8;
+  opacity: 1;
+  cursor: pointer;
+}

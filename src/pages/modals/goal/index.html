@@ -4,48 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Global -->
     <link rel="stylesheet" href="../../../../global.css" />
-<link rel="stylesheet" href="../../../components/Box/BoxModal/index.css">
-    <link rel="stylesheet" href="../../../components/Box/BoxMiddle/index.css" />
-    <link rel="stylesheet" href="../../../components/Wallet/WalletBox/index.css" />
-    <link rel="stylesheet" href="../../../components/Wallet/JoinWallet/index.css">
-    <link rel="stylesheet" href="../../../components/Wallet/JoinTitle/index.css">
-    <link rel="stylesheet" href="../../../components/Input/JoinInput/index.css">
+    <!-- End Global -->
+
+    <!-- Wallet -->
+    <link
+      rel="stylesheet"
+      href="../../../components/Wallet/BoxWallet/index.css"
+    />
+    <link rel="stylesheet" href="../../../components/Wallet/Join/index.css" />
+    <!-- End Wallet -->
+
+    <!-- Box  -->
+    <link
+      rel="stylesheet"
+      href="../../../components/Box/BoxCase/CaseModal/index.css"
+    />
+    <!-- End Box -->
+
+    <!-- Input -->
+    <link
+      rel="stylesheet"
+      href="../../../components/Input/JoinInput/index.css"
+    />
+    <!-- End Input -->
+
+    <!-- Shared -->
     <link rel="stylesheet" href="../../../components/shared/Circle/index.css" />
     <link rel="stylesheet" href="../../../components/shared/Icon/index.css" />
     <link rel="stylesheet" href="../../../components/shared/Text/index.css" />
     <link rel="stylesheet" href="../../../components/shared/Input/index.css" />
-    <link rel="stylesheet" href="../../../components/Keyboard/index.css">
-    <link rel="stylesheet" href="../../../components/shared/KeyboardButton/index.css">
-    <link rel="stylesheet" href="../../../components/shared/Button/index.css">
-    <link rel="stylesheet" href="../../../components/shared/Text/index.css">
+    <link rel="stylesheet" href="../../../components/shared/Button/index.css" />
+    <link rel="stylesheet" href="../../../components/shared/Text/index.css" />
+    <!-- End Shared -->
+
+    <!-- Keyboard -->
+    <link rel="stylesheet" href="../../../components/Keyboard/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../../components/shared/KeyboardButton/index.css"
+    />
+    <!-- End Keyboard -->
+
+    <!-- Page Styles -->
     <link rel="stylesheet" href="../../modals/goal/styles.css" />
+    <!-- End Page Styles -->
+
     <title>Goal</title>
   </head>
   <body>
     <main id="root">
-
-      <div class="modal-box">
-
+      <div class="case-modal">
         <div class="wallet-box">
           <div class="join-wallet">
             <div class="default-circle">
               <img class="icon" src="../../../img/eletronic-wallet.png" />
             </div>
             <div class="join-title">
-                <span class="title-middle">Categoria</span>
-                <span class="sub-title-middle">nome</span>
+              <span class="title-middle">Categoria</span>
+              <span class="sub-title-middle">nome</span>
             </div>
           </div>
           <img class="icon margin-right" src="../../../img/add.png" />
         </div>
-
-        <input
-          class="default-input"
-          type="text"
-          placeholder="Nome da Meta"
-        />
-
+        <input class="default-input" type="text" placeholder="Nome da Meta" />
         <div class="join-input">
           <span class="title-middle props-title">Final da Meta</span>
           <input
@@ -53,25 +77,23 @@
             type="data"
             placeholder="20/03/2021"
           />
-        </div>  
-
-          <span class="field-value title-middle props-title">R$ 100,00</span>
-
+        </div>
+        <span class="field-value title-middle props-title">R$ 100,00</span>
         <div class="keyboard">
-         <div class="keyboard-button">1</div>
-         <div class="keyboard-button">2</div>
-         <div class="keyboard-button">3</div>
-         <div class="keyboard-button">4</div>
-         <div class="keyboard-button">5</div>
-         <div class="keyboard-button">6</div>
-         <div class="keyboard-button">7</div>
-         <div class="keyboard-button">8</div>
-         <div class="keyboard-button">9</div>
-         <div class="keyboard-button">0</div>
-         <img class="keyboard-icon-prop" src="../../../img/excluir.png">
+          <div class="keyboard-button">1</div>
+          <div class="keyboard-button">2</div>
+          <div class="keyboard-button">3</div>
+          <div class="keyboard-button">4</div>
+          <div class="keyboard-button">5</div>
+          <div class="keyboard-button">6</div>
+          <div class="keyboard-button">7</div>
+          <div class="keyboard-button">8</div>
+          <div class="keyboard-button">9</div>
+          <div class="keyboard-button">0</div>
+          <img class="keyboard-icon-prop" src="../../../img/excluir.png" />
+        </div>
+        <button class="default-button">Criar Meta</button>
       </div>
-      <button class="default-button">Criar Meta</button>
-      
     </main>
   </body>
 </html>
