@@ -4,29 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Global -->
     <link rel="stylesheet" href="../../../global.css" />
     <!-- End Global -->
 
-    <!-- Currency -->
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/BoxCurrency/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/CurrencySign/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/JoinCurrency/index.css"
-    />
-    <!-- End Currency -->
-
-    <!-- Footer -->
-    <link rel="stylesheet" href="../../components/Footer/BoxFooter/index.css" />
-    <!-- End Footer -->
+    <!-- Box  -->
+    <link rel="stylesheet" href="../../components/Box/BoxUpper/index.css" />
+    <!-- End Box  -->
 
     <!-- Header -->
     <link rel="stylesheet" href="../../components/Header/BoxHeader/index.css" />
@@ -55,24 +39,35 @@
     <link rel="stylesheet" href="../../components/shared/Circle/index.css" />
     <!-- End Shared -->
 
-    <!-- Box Middle -->
-    <link rel="stylesheet" href="../../components/Box/BoxMiddle/index.css" />
-    <link rel="stylesheet" href="../../components/Box/BoxUpper/index.css">
-    <!-- End Box Middle -->
+    <!-- Footer -->
+    <link rel="stylesheet" href="../../components/Footer/BoxFooter/index.css" />
+    <!-- End Footer -->
 
-    <!-- Keyboard -->
-    <link rel="stylesheet" href="../../components/Keyboard/index.css" />
+    <!-- Wallet -->
+    <link rel="stylesheet" href="../../components/Wallet/BoxWallet/index.css" />
+    <link rel="stylesheet" href="../../components/Wallet/Join/index.css" />
+    <!-- End Wallet -->
+
+    <!-- Currency -->
     <link
       rel="stylesheet"
-      href="../../components/shared/KeyboardButton/index.css"
+      href="../../components/Currency/BoxCurrency/index.css"
     />
-    <!-- End Keyboard -->
+    <link
+      rel="stylesheet"
+      href="../../components/Currency/CurrencySign/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/Currency/JoinCurrency/index.css"
+    />
+    <!-- End Currency -->
 
     <!-- Page Styles -->
-    <link rel="stylesheet" href="../../pages/cost/styles.css" />
+    <link rel="stylesheet" href="../../pages/cost-next/styles.css" />
     <!-- End Page Styles -->
 
-    <title>Cost</title>
+    <title>Cost Next</title>
   </head>
   <body>
     <main id="root">
@@ -88,29 +83,43 @@
         </div>
       </div>
 
-      <div class="currency-box">
-        <div class="join-currency-big">
-          <span class="title-currency-big negative">R$</span>
-          <span class="title-money-big negative">100.000,00</span>
-        </div>
-      </div>
-
       <div class="middle-box">
         <div class="upper-box">
-          <div class="keyboard">
-            <div class="keyboard-button">1</div>
-            <div class="keyboard-button">2</div>
-            <div class="keyboard-button">3</div>
-            <div class="keyboard-button">4</div>
-            <div class="keyboard-button">5</div>
-            <div class="keyboard-button">6</div>
-            <div class="keyboard-button">7</div>
-            <div class="keyboard-button">8</div>
-            <div class="keyboard-button">9</div>
-            <div class="keyboard-button">0</div>
-            <img class="keyboard-icon-prop" src="../../img/excluir.png" />
+          <div class="wrapper-value">
+            <span class="">X</span>
+            <div class="field-value">
+              <span class="">R$ 100,00</span>
+            </div>
           </div>
-          <button class="default-button">Continuar</button>
+
+          <div class="wallet-box">
+            <div class="join-wallet">
+              <div class="default-circle">
+                <img class="icon" src="../../img/eletronic-wallet.png" />
+              </div>
+              <div class="join-title">
+                <span class="title-middle">Carteira</span>
+                <span class="sub-title-middle">nome</span>
+              </div>
+            </div>
+            <div class="join-currency">
+              <span class="title-currency-middle">R$</span>
+              <span class="title-money-middle">100.000,00</span>
+            </div>
+          </div>
+
+          <div class="wallet-box">
+            <div class="join-wallet">
+              <div class="default-circle">
+                <img class="icon" src="../../img/eletronic-wallet.png" />
+              </div>
+              <div class="join-title">
+                <span class="title-middle">Categoria</span>
+                <span class="sub-title-middle">nome</span>
+              </div>
+            </div>
+            <img class="icon margin-right" src="../../img/add.png" />
+          </div>
         </div>
       </div>
 

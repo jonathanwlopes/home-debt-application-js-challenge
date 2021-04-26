@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   overflow-y: scroll;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background: #ffffff;
   opacity: 1;
