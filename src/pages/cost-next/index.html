@@ -63,6 +63,10 @@
     />
     <!-- End Currency -->
 
+    <!-- Input -->
+    <link rel="stylesheet" href="../../components/shared/Input/index.css" />
+    <!-- End Input -->
+
     <!-- Page Styles -->
     <link rel="stylesheet" href="../../pages/cost-next/styles.css" />
     <!-- End Page Styles -->
@@ -86,9 +90,12 @@
       <div class="middle-box">
         <div class="upper-box">
           <div class="wrapper-value">
-            <span class="">X</span>
+            <span class="close-text">X</span>
             <div class="field-value">
-              <span class="">R$ 100,00</span>
+              <span class="title-currency-middle">R$</span>
+              <span class="title-money-middle title-money-color"
+                >100.000,00</span
+              >
             </div>
           </div>
 
@@ -120,6 +127,50 @@
             </div>
             <img class="icon margin-right" src="../../img/add.png" />
           </div>
+
+          <div class="wrapper-date-parcel">
+            <div class="case-date">
+              <span class="title-big">Data</span>
+              <input type="date" class="default-input" />
+            </div>
+
+            <div class="case-date">
+              <span class="title-big">Parcelas</span>
+              <input
+                type="text"
+                class="default-input width-input"
+                placeholder="12x"
+              />
+
+              <div class="wrapper-parcel">
+                <div class="confirm">
+                  <div class="confirm-ok"></div>
+                </div>
+
+                <div class="wrapper-parcel-text">
+                  <span class="text-parcel">Dividir</span>
+                  <span class="text-parcel">Valor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="insert-tags">
+            <div class="wrapper-tags">
+              <div class="tag-content">
+                <span class="name-tag">Tag</span>
+                <span class="close-tag">X</span>
+              </div>
+            </div>
+            <div class="add-tags">
+              <span class="text-add-tags">Adicionar</span>
+              <span class="text-add-tags">+</span>
+            </div>
+          </div>
+
+          <textarea class="text-area" name="Obs" rows="5" cols="33" placeholder="Obs"></textarea>
+
+          <button class="default-button">Concluir</button>
         </div>
       </div>
 
