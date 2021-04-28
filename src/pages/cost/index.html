@@ -9,39 +9,17 @@
     <link rel="stylesheet" href="../../../global.css" />
     <!-- End Global -->
 
-    <!-- Currency -->
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/BoxCurrency/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/CurrencySign/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/JoinCurrency/index.css"
-    />
-    <!-- End Currency -->
+    <!-- Nav -->
+    <link rel="stylesheet" href="../../components/Nav/index.css" />
+    <!-- End Nav -->
 
-    <!-- Footer -->
-    <link rel="stylesheet" href="../../components/Footer/BoxFooter/index.css" />
-    <!-- End Footer -->
+    <!-- Cost Box -->
+    <link rel="stylesheet" href="../../components/Cost/CostBox/index.css" />
+    <!-- End Cost Box -->
 
-    <!-- Header -->
-    <link rel="stylesheet" href="../../components/Nav/index.css">
-    <!-- End Header -->
-
-    <!-- Shared -->
-    <link rel="stylesheet" href="../../components/shared/Text/index.css" />
-    <link rel="stylesheet" href="../../components/shared/Button/index.css" />
-    <link rel="stylesheet" href="../../components/shared/Icon/index.css" />
-    <link rel="stylesheet" href="../../components/shared/Circle/index.css" />
-    <!-- End Shared -->
-
-    <!-- Box Middle -->
-    <link rel="stylesheet" href="../../components/Box/BoxUpper/index.css" />
-    <!-- End Box Middle -->
+    <!-- Amount Box -->
+    <link rel="stylesheet" href="../../components/AmoutBox/index.css" />
+    <!-- End Amount Box -->
 
     <!-- Keyboard -->
     <link rel="stylesheet" href="../../components/Keyboard/index.css" />
@@ -51,6 +29,17 @@
     />
     <!-- End Keyboard -->
 
+    <!-- Footer -->
+    <link rel="stylesheet" href="../../components/Footer/index.css" />
+    <!-- End Footer -->
+
+    <!-- Shared -->
+    <link rel="stylesheet" href="../../components/shared/Text/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Button/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Icon/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Circle/index.css" />
+    <!-- End Shared -->
+
     <!-- Page Styles -->
     <link rel="stylesheet" href="../../pages/cost/styles.css" />
     <!-- End Page Styles -->
@@ -59,25 +48,30 @@
   </head>
   <body>
     <main id="root">
-
       <nav class="nav-bar">
         <div class="nav-container">
           <ul class="nav-list">
-            <li class="income align-links"><a class="link" href="#">Receita</a></li>
-            <li class="cost select align-links"><a class="link" href="#">Despesa</a></li>
-            <li class="transfer align-links"><a class="link" href="#">Transferência</a></li>
+            <li class="income align-links">
+              <a class="link" href="#">Receita</a>
+            </li>
+            <li class="cost select align-links">
+              <a class="link" href="#">Despesa</a>
+            </li>
+            <li class="transfer align-links">
+              <a class="link" href="#">Transferência</a>
+            </li>
           </ul>
         </div>
       </nav>
 
-      <div class="currency-box">
-        <div class="join-currency-big">
-          <span class="title-currency-big negative">R$</span>
-          <span class="title-money-big negative">100.000,00</span>
+      <div class="amount-box amount-box-gray">
+        <div class="join-currency">
+          <span class="text-currency negative-color bold">R$</span>
+          <span class="text-amount negative-color">100.000,00</span>
         </div>
       </div>
 
-      <div class="upper-box">
+      <div class="cost-box">
         <div class="keyboard">
           <div class="keyboard-button">1</div>
           <div class="keyboard-button">2</div>
