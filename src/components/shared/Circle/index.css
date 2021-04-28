@@ -1,4 +1,7 @@
 .default-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent linear-gradient(180deg, #53a9ff 0%, #328de8 100%) 0%
     0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
@@ -6,9 +9,6 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .red {

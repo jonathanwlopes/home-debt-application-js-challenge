@@ -1,54 +1,27 @@
-.title-big {
-  height: 24px;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 0px;
-  opacity: 1;
-}
-
 .title-middle {
+  line-height: 25px;
   font-size: 16px;
-  font-weight: bold;
   letter-spacing: 0px;
-  opacity: 1;
-  text-rendering: optimizeLegibility;
   color: #707070;
-}
-
-.sub-title-middle {
-  text-align: left;
-  font-size: 14px;
-  height: 17px;
-  letter-spacing: 0px;
   opacity: 1;
- color: #707070;
 }
-
-.sub-title-small {
-  text-align: left;
-  font-size: 12px;
-  height: 17px;
-  letter-spacing: 0px;
-  opacity: 1;
- color: #707070;
-}
-
 
 .bold {
   font-weight: bold;
 }
 
-.header-text {
-  font-size: 20px;
+.sub-title-middle {
+  line-height: 17px;
+  font-size: 14px;
   letter-spacing: 0px;
-  color: #ffffff;
+  color: #707070;
+  opacity: 1;
 }
 
-.close-text{
-  color: #53A9FF;
-  font-weight: bold;
-}
-.close-text:hover{
-  transform: matrix(0, 1, -1, 0, 0, 0);
+.title-small {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #707070;
   opacity: 1;
 }

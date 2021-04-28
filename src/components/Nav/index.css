@@ -1,0 +1,41 @@
+.nav-bar {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  background: #4aa2f9;
+}
+
+.nav-list .income {
+  width: 112px;
+  height: 48px;
+}
+
+.nav-list .cost {
+  width: 105px;
+  height: 48px;
+}
+
+.nav-list .transfer {
+  width: 163px;
+  height: 48px;
+}
+
+.nav-list .select {
+  background: #94c8fc;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.align-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

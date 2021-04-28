@@ -1,0 +1,17 @@
+.wrapper-end-goal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.wrapper-end-goal .title-middle {
+  color: #53a9ff;
+}
+
+.wrapper-end-goal .input-default {
+  top: 294px;
+  left: 200px;
+  width: 145px;
+  height: 35px;
+}

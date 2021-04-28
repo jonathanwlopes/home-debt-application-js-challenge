@@ -12,24 +12,21 @@
     <!-- Wallet -->
     <link
       rel="stylesheet"
-      href="../../../components/Wallet/BoxWallet/index.css"
+      href="../../../components/Wallet/WalletBox/index.css"
     />
-    <link rel="stylesheet" href="../../../components/Wallet/Join/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../../components/Wallet/WalletCase/index.css"
+    />
     <!-- End Wallet -->
 
-    <!-- Box  -->
+    <!-- Goal -->
+    <link rel="stylesheet" href="../../../components/Goal/GoalBox/index.css" />
     <link
       rel="stylesheet"
-      href="../../../components/Box/BoxCase/CaseModal/index.css"
+      href="../../../components/Goal/EndOfGoal/index.css"
     />
-    <!-- End Box -->
-
-    <!-- Input -->
-    <link
-      rel="stylesheet"
-      href="../../../components/Input/JoinInput/index.css"
-    />
-    <!-- End Input -->
+    <!-- Goal -->
 
     <!-- Shared -->
     <link rel="stylesheet" href="../../../components/shared/Circle/index.css" />
@@ -37,15 +34,14 @@
     <link rel="stylesheet" href="../../../components/shared/Text/index.css" />
     <link rel="stylesheet" href="../../../components/shared/Input/index.css" />
     <link rel="stylesheet" href="../../../components/shared/Button/index.css" />
-    <link rel="stylesheet" href="../../../components/shared/Text/index.css" />
-    <!-- End Shared -->
-
-    <!-- Keyboard -->
-    <link rel="stylesheet" href="../../../components/Keyboard/index.css" />
     <link
       rel="stylesheet"
       href="../../../components/shared/KeyboardButton/index.css"
     />
+    <!-- End Shared -->
+
+    <!-- Keyboard -->
+    <link rel="stylesheet" href="../../../components/Keyboard/index.css" />
     <!-- End Keyboard -->
 
     <!-- Page Styles -->
@@ -56,29 +52,35 @@
   </head>
   <body>
     <main id="root">
-      <div class="case-modal">
-        <div class="wallet-box">
-          <div class="join-wallet">
+      <div class="goal-box">
+        <div class="wallet-case">
+          <div class="join-icon-text">
             <div class="default-circle">
               <img class="icon" src="../../../img/eletronic-wallet.png" />
             </div>
-            <div class="join-title">
-              <span class="title-middle">Categoria</span>
-              <span class="sub-title-middle">nome</span>
+            <div class="join-text">
+              <span class="title-middle bold">Categoria</span>
+              <span class="title-small">nome</span>
             </div>
           </div>
           <img class="icon margin-right" src="../../../img/add.png" />
         </div>
-        <input class="default-input" type="text" placeholder="Nome da Meta" />
-        <div class="join-input">
-          <span class="title-middle props-title">Final da Meta</span>
-          <input
-            class="default-input width-input-data"
-            type="data"
-            placeholder="20/03/2021"
-          />
+
+        <input
+          class="input-default width-big"
+          type="text"
+          placeholder="Nome da Meta"
+        />
+
+        <div class="wrapper-end-goal">
+          <span class="title-middle">Final da Meta</span>
+          <input class="input-default" type="data" placeholder="13/04/2020" />
         </div>
-        <span class="field-value title-middle props-title">R$ 100,00</span>
+
+        <div class="field">
+          <span class="title-middle">R$ 100,00</span>
+        </div>
+
         <div class="keyboard">
           <div class="keyboard-button">1</div>
           <div class="keyboard-button">2</div>
@@ -92,6 +94,7 @@
           <div class="keyboard-button">0</div>
           <img class="keyboard-icon-prop" src="../../../img/excluir.png" />
         </div>
+
         <button class="default-button">Criar Meta</button>
       </div>
     </main>

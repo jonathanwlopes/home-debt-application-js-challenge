@@ -1,0 +1,64 @@
+.wallet-case {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 125px;
+  left: 15px;
+  width: 345px;
+  height: 73px;
+  border-radius: 9px;
+  padding: 1rem;
+}
+
+.join-icon-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.join-text {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.wallet-case .join-currency {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wallet-case .text-currency {
+  line-height: 17px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0px;
+  color: #53a9ff;
+  opacity: 1;
+}
+
+.wallet-case .text-amount {
+  line-height: 17px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: #53a9ff;
+  opacity: 1;
+}
+
+.join-icon-progress{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.join-reserve{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.join-reserve .title-middle{
+  margin-bottom: 0.3rem;
+}
+
