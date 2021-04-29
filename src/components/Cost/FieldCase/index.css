@@ -1,0 +1,35 @@
+.field-case {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.field-case .join-currency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 36px;
+  background: #53a9ff61 0% 0% no-repeat padding-box;
+  border-radius: 9px;
+  opacity: 1;
+}
+
+.field-case .title-middle {
+  color: #53a9ff;
+}
+
+.field-case .join-currency {
+  margin-left: 5rem;
+}
+
+.field-case .text-amount{
+  margin-left: 0.2rem;
+  color: #707070;
+  font-size: 16px;
+}
+
+
+.field-case .text-currency{
+  color: #53A9FF;
+}

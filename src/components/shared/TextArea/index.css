@@ -1,0 +1,17 @@
+.text-area {
+  width: 90%;
+height: 125px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #53a9ff91;
+  border-radius: 9px;
+  opacity: 1;
+  outline: none;
+  padding: 0.8rem;
+  color: #707070;
+  opacity: 0.62;
+  font-size: 14px;
+}
+
+::-webkit-input-placeholder {
+  color: #707070;
+}

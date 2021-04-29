@@ -9,17 +9,16 @@
   opacity: 1;
 }
 
+
 .amount-box .join-currency {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 50%;
-  height: 27px;
 }
 
 .amount-box .text-currency {
   width: 27px;
-  height: 27px;
   font-weight: 900;
   font-size: 22px;
   letter-spacing: 0px;

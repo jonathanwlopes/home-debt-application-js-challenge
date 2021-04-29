@@ -15,11 +15,27 @@
 
     <!-- Cost Box -->
     <link rel="stylesheet" href="../../components/Cost/CostBox/index.css" />
+    <link rel="stylesheet" href="../../components/Cost/FieldCase/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/Cost/DateParcelBox/index.css"
+    />
+    <link rel="stylesheet" href="../../components/Cost/JoinDate/index.css" />
+    <link rel="stylesheet" href="../../components/Cost/JoinParcel/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/Cost/Tags/TagsBox/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/Cost/Tags/JoinTag/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../components/Cost/Tags/TagContent/index.css"
+    />
+    <link rel="stylesheet" href="../../components/Cost/Tags/AddTag/index.css">
     <!-- End Cost Box -->
-
-    <!-- Field -->
-    <link rel="stylesheet" href="../../components/Cost/Field/index.css" />
-    <!-- End Field -->
 
     <!-- Wallet -->
     <link rel="stylesheet" href="../../components/Wallet/WalletBox/index.css" />
@@ -65,32 +81,18 @@
     <link rel="stylesheet" href="../../components/shared/Button/index.css" />
     <link rel="stylesheet" href="../../components/shared/Icon/index.css" />
     <link rel="stylesheet" href="../../components/shared/Circle/index.css" />
-    <link rel="stylesheet" href="../../components/shared/Close/index.css">
-    <link rel="stylesheet" href="../../components/shared/Colors/index.css">
+    <link rel="stylesheet" href="../../components/shared/Close/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Colors/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Tick/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Input/index.css" />
+    <link rel="stylesheet" href="../../components/shared/TextArea/index.css">
     <!-- End Shared -->
 
     <!-- Footer -->
     <link rel="stylesheet" href="../../components/Footer/index.css" />
     <!-- End Footer -->
 
-    <!-- Currency -->
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/BoxCurrency/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/CurrencySign/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../components/Currency/JoinCurrency/index.css"
-    />
-    <!-- End Currency -->
 
-    <!-- Input -->
-    <link rel="stylesheet" href="../../components/shared/Input/index.css" />
-    <!-- End Input -->
 
     <!-- Page Styles -->
     <link rel="stylesheet" href="../../pages/cost-next/styles.css" />
@@ -100,7 +102,6 @@
   </head>
   <body>
     <main id="root">
-
       <nav class="nav-bar">
         <div class="nav-container">
           <ul class="nav-list">
@@ -118,11 +119,10 @@
       </nav>
 
       <div class="cost-box">
-
-        <div class="field">
+        <div class="field-case">
           <span class="close">X</span>
 
-          <div class="field-value">
+          <div class="join-currency">
             <span class="text-currency">R$</span>
             <span class="text-amount">100.000,00</span>
           </div>
@@ -154,42 +154,47 @@
               <span class="title-small">nome</span>
             </div>
           </div>
-          <img class="icon icon-margin-right" src="../../img/add.png" />
+          <img class="icon icon-margin-right icon-effect" src="../../img/add.png" />
         </div>
 
-        <div class="wrapper-date-parcel">
-          <div class="case-date-parcel">
-            <span class="title-big">Data</span>
-            <input type="date" class="default-input" />
+        <div class="date-parcel-box">
+          <div class="join-date">
+            <span class="title-big bold">Data</span>
+            <input type="date" class="input-default" />
           </div>
 
-          <div class="case-date">
-            <span class="title-big">Parcelas</span>
-            <input type="text" class="default-input width-input" />
+          <div class="join-parcel">
+            <span class="title-big bold">Parcelas</span>
 
             <div class="wrapper-parcel">
-              <div class="confirm">
-                <div class="confirm-ok"></div>
+              <input type="text" class="input-default" placeholder="1 vez" />
+              <div class="tick">
+                <img class="icon" src="../../img/tick.png" />
               </div>
-
-              <div class="wrapper-parcel-text">
-                <span class="text-parcel">Dividir</span>
-                <span class="text-parcel">Valor</span>
+              <div class="join-text">
+                <span class="title-small">Dividir</span>
+                <span class="title-small">Valor</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="insert-tags">
-          <div class="wrapper-tags">
+        <div class="tags-box">
+          <div class="join-tag">
             <div class="tag-content">
-              <span class="name-tag">Tag</span>
-              <span class="close-tag">X</span>
+              <span class="title-small">Tag</span>
+              <span class="close">X</span>
+            </div>
+
+            <div class="tag-content">
+              <span class="title-small legible">Tag</span>
+              <span class="close">X</span>
             </div>
           </div>
-          <div class="add-tags">
-            <span class="text-add-tags">Adicionar</span>
-            <span class="text-add-tags">+</span>
+
+          <div class="add-tag">
+            <span class="title-small">Adicionar</span>
+            <img class="icon" src="../../img/plus.png">
           </div>
         </div>
 

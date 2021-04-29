@@ -1,9 +1,0 @@
-.field {
-  display: flex;
-  align-items: flex-start;
-  width: 90%;
-}
-
-.field .title-middle {
-  color: #53a9ff;
-}

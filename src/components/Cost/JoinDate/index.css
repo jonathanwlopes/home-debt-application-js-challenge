@@ -1,0 +1,20 @@
+.join-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.join-date .title-big {
+  color: #53a9ff;
+}
+
+.join-date .input-default {
+  text-align: center;
+  width: 192px;
+  height: 40px;
+  letter-spacing: 1.54px;
+  opacity: 0.79;
+  font-size: 14px;
+  padding: 1rem;
+}
