@@ -4,12 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Global -->
     <link rel="stylesheet" href="../../../global.css" />
     <!-- End Global -->
 
+    <!-- Nav -->
+    <link rel="stylesheet" href="../../components/Nav/index.css" />
+    <!-- End Nav -->
+
+    <!-- Cost Box -->
+    <link rel="stylesheet" href="../../components/Cost/CostBox/index.css" />
+    <!-- End Cost Box -->
+
+    <!-- Field -->
+    <link rel="stylesheet" href="../../components/Cost/Field/index.css" />
+    <!-- End Field -->
+
+    <!-- Wallet -->
+    <link rel="stylesheet" href="../../components/Wallet/WalletBox/index.css" />
+    <link
+      rel="stylesheet"
+      href="../../components/Wallet/WalletCase/index.css"
+    />
+    <!-- End Wallet -->
+
     <!-- Date Parcel -->
-    <link rel="stylesheet" href="../../components/DateParcel/CaseParcel/index.css">
+    <link
+      rel="stylesheet"
+      href="../../components/DateParcel/CaseParcel/index.css"
+    />
     <!-- End Date Parcel -->
 
     <!-- Box  -->
@@ -41,16 +65,13 @@
     <link rel="stylesheet" href="../../components/shared/Button/index.css" />
     <link rel="stylesheet" href="../../components/shared/Icon/index.css" />
     <link rel="stylesheet" href="../../components/shared/Circle/index.css" />
+    <link rel="stylesheet" href="../../components/shared/Close/index.css">
+    <link rel="stylesheet" href="../../components/shared/Colors/index.css">
     <!-- End Shared -->
 
     <!-- Footer -->
-    <link rel="stylesheet" href="../../components/Footer/BoxFooter/index.css" />
+    <link rel="stylesheet" href="../../components/Footer/index.css" />
     <!-- End Footer -->
-
-    <!-- Wallet -->
-    <link rel="stylesheet" href="../../components/Wallet/BoxWallet/index.css" />
-    <link rel="stylesheet" href="../../components/Wallet/Join/index.css" />
-    <!-- End Wallet -->
 
     <!-- Currency -->
     <link
@@ -79,60 +100,64 @@
   </head>
   <body>
     <main id="root">
-      <div class="header-box">
-        <div class="header-case-income">
-          <span class="header-text">Receita</span>
-        </div>
-        <div class="header-case-cost selected">
-          <span class="header-text">Despesa</span>
-        </div>
-        <div class="header-case-transfer">
-          <span class="header-text">Transferência</span>
-        </div>
-      </div>
 
-      <div class="upper-box">
-        <div class="wrapper-value">
-          <span class="close-text">X</span>
+      <nav class="nav-bar">
+        <div class="nav-container">
+          <ul class="nav-list">
+            <li class="income align-links">
+              <a class="link" href="#">Receita</a>
+            </li>
+            <li class="cost select align-links">
+              <a class="link" href="#">Despesa</a>
+            </li>
+            <li class="transfer align-links">
+              <a class="link" href="#">Transferência</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="cost-box">
+
+        <div class="field">
+          <span class="close">X</span>
 
           <div class="field-value">
-            <span class="title-currency-middle">R$</span>
-            <span class="title-money-middle title-money-color">100.000,00</span>
+            <span class="text-currency">R$</span>
+            <span class="text-amount">100.000,00</span>
           </div>
-
         </div>
 
-        <div class="wallet-box">
-          <div class="join-wallet">
+        <div class="wallet-case blue">
+          <div class="join-icon-text">
             <div class="default-circle">
               <img class="icon" src="../../img/eletronic-wallet.png" />
             </div>
-            <div class="join-title">
-              <span class="title-middle">Carteira</span>
-              <span class="sub-title-middle">nome</span>
+            <div class="join-text">
+              <span class="title-middle bold">Carteira</span>
+              <span class="title-small">nome</span>
             </div>
           </div>
           <div class="join-currency">
-            <span class="title-currency-middle">R$</span>
-            <span class="title-money-middle">100.000,00</span>
+            <span class="text-currency">R$</span>
+            <span class="text-amount">100.000,00</span>
           </div>
         </div>
 
-        <div class="wallet-box">
-          <div class="join-wallet">
+        <div class="wallet-case blue">
+          <div class="join-icon-text">
             <div class="default-circle">
               <img class="icon" src="../../img/eletronic-wallet.png" />
             </div>
-            <div class="join-title">
-              <span class="title-middle">Categoria</span>
-              <span class="sub-title-middle">nome</span>
+            <div class="join-text">
+              <span class="title-middle bold">Categoria</span>
+              <span class="title-small">nome</span>
             </div>
           </div>
           <img class="icon icon-margin-right" src="../../img/add.png" />
         </div>
 
         <div class="wrapper-date-parcel">
-
           <div class="case-date-parcel">
             <span class="title-big">Data</span>
             <input type="date" class="default-input" />
@@ -153,7 +178,6 @@
               </div>
             </div>
           </div>
-
         </div>
 
         <div class="insert-tags">

@@ -30,20 +30,11 @@
 }
 
 .wallet-case .text-currency {
-  line-height: 17px;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0px;
   color: #53a9ff;
-  opacity: 1;
 }
 
 .wallet-case .text-amount {
-  line-height: 17px;
-  font-size: 14px;
-  letter-spacing: 0px;
   color: #53a9ff;
-  opacity: 1;
 }
 
 .join-icon-progress{

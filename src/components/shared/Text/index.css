@@ -25,3 +25,19 @@
   color: #707070;
   opacity: 1;
 }
+
+.text-currency{
+  line-height: 17px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0px;
+  opacity: 1; 
+}
+
+.text-amount{
+  line-height: 17px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
