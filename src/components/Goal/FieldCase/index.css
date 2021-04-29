@@ -1,0 +1,14 @@
+.field-case {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  border-radius: 9px;
+  opacity: 1;
+  width: 345px;
+  height: 36px;
+}
+
+.field-case .title-middle {
+  color: #53a9ff;
+}
