@@ -7,7 +7,7 @@ const walletBox = {
       classList: ["wallet-box"],
     });
 
-    return walletBox
+    return walletBox;
   },
 };
 
