@@ -14,7 +14,7 @@ const ElementTest = (props) => {
     return false;
   }
 
-  if (typeof props.classList != "object") {
+  if (props.classList && typeof props.classList != "object") {
     console.error("Element error: props.classList object required!");
     return false;
   }
@@ -22,6 +22,16 @@ const ElementTest = (props) => {
   if (props.children && typeof props.children != "object") {
     console.error("Element error: props.children object required!");
     return false;
+  }
+
+  if(props.attribute && typeof props.attribute.frist != 'object'){
+    console.error("Element error: props.attribute.frist object required!");
+    return false
+  }
+
+  if(props.attribute && typeof props.attribute.second != 'object'){
+    console.error("Element error: props.attribute.second object required!");
+    return false
   }
 
   return true;
