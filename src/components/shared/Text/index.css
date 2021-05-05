@@ -52,3 +52,12 @@
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
 }
+
+.margin-button {
+  margin-top: 48px;
+  margin-bottom: 31px;
+}
+
+.margin-title {
+  margin-top: 19px;
+}

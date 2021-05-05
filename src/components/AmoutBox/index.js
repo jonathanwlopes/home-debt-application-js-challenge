@@ -9,13 +9,13 @@ const AmoutBox = {
       src: Images.totalWallet,
     });
 
-    const _textAmount = Element({
+    const _titleAmount = Element({
       typeElement: "span",
       classList: ["text-amount"],
       textContent: "100.000,00",
     });
 
-    const _textCurrency = Element({
+    const _titleCurrency = Element({
       typeElement: "span",
       classList: ["text-currency"],
       textContent: "R$",
@@ -24,7 +24,7 @@ const AmoutBox = {
     const _joinCurrency = Element({
       typeElement: "div",
       classList: ["join-currency"],
-      children: [_textCurrency, _textAmount, _totalWallet],
+      children: [_titleCurrency, _titleAmount, _totalWallet],
     });
 
     const _amoutBox = Element({

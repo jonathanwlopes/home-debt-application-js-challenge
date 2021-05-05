@@ -2,7 +2,7 @@ import AmoutBox from "../../components/AmoutBox/index.js";
 import StylesLink from "../../components/assets/Styles/index.js";
 import Element from "../../components/element/index.js";
 import footer from "../../components/Footer/index.js";
-import scrollBox from "../../components/ScrollBox/index.js";
+import ScrollBox from "../../components/ScrollBox/index.js";
 import importStyles from "../../utils/import/css/index.js";
 
 const Home = {
@@ -27,7 +27,7 @@ const Home = {
     });
 
     const _footer = footer.build();
-    const _scrollBox = scrollBox.build();
+    const _scrollBox = ScrollBox.build();
     const _amoutBox = AmoutBox.build();
 
     const _container = Element({
