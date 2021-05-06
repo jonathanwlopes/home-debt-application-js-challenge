@@ -1,10 +1,11 @@
 import Element from "../../element/index.js";
 
 const walletBox = {
-  build: () => {
+  build: (element) => {
     const walletBox = Element({
       typeElement: "div",
       classList: ["wallet-box"],
+      children: element
     });
 
     return walletBox;

@@ -6,6 +6,10 @@ const StylesLink = {
   walletCase: "../../components/Wallet/WalletCase/index.css",
   scrollBox: "../../components/ScrollBox/index.css",
   footer: "../../components/Footer/index.css",
+  nav: "../../components/Nav/index.css",
+  costBox: "../../components/Cost/CostBox/index.css",
+  keyboard: "../../components/Keyboard/index.css",
+  keyboardButton: "../../components/shared/KeyboardButton/index.css",
   shared: {
     text: "../../components/shared/Text/index.css",
     icon: "../../components/shared/Icon/index.css",
@@ -14,5 +18,7 @@ const StylesLink = {
     button: "../../components/shared/Button/index.css",
   },
 };
+
+
 
 export default StylesLink;

@@ -1,7 +1,7 @@
 import Images from "../assets/img/index.js";
 import Element from "../element/index.js";
 
-const footer = {
+const Footer = {
   build: () => {
     const _iStore = Element({
       typeElement: "img",
@@ -41,4 +41,4 @@ const footer = {
   },
 };
 
-export default footer;
+export default Footer;
