@@ -32,7 +32,10 @@ const Outgoing = {
 
     const _footer = Footer.build();
 
-    const _joinPayable = JoinPayable.build({title: '-100', subTitle: 'não pago'})
+    const _joinPayable = JoinPayable.build({
+      title: "-100",
+      subTitle: "não pago",
+    });
 
     const _joinIcText = JoinIcText.build({ title: "Tipo", subTitle: "Conta" });
 
