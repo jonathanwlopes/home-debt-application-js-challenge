@@ -21,6 +21,8 @@ const Element = (props) => {
 
   if (props.src) _element.src = props.src;
 
+  if (props.innerHTML) _element.innerHTML = props.innerHTML;
+
   return _element;
 };
 

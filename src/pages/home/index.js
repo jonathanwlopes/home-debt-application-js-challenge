@@ -1,17 +1,9 @@
-import AmoutBox from "../../components/AmoutBox/index.js";
 import Images from "../../components/assets/img/index.js";
 import StylesLink from "../../components/assets/Styles/index.js";
-import CaseProgress from "../../components/CaseProgress/index.js";
 import Element from "../../components/element/index.js";
 import footer from "../../components/Footer/index.js";
-import JoinCurrency from "../../components/JoinCurrency/index.js";
-import JoinIcProgress from "../../components/JoinIcProgress/index.js";
-import JoinIcText from "../../components/joinIcText/index.js";
-import ScrollBox from "../../components/ScrollBox/index.js";
 import Title from "../../components/Title/index.js";
-import walletBox from "../../components/Wallet/WalletBox/index.js";
-import walletCase from "../../components/Wallet/WalletCase/index.js";
-import GenerateDiv from "../../utils/GenerateDiv/index.js";
+import GenerateDiv from "../../components/GenerateDiv/index.js";
 import importStyles from "../../utils/import/css/index.js";
 
 const Home = {
@@ -43,29 +35,113 @@ const Home = {
       textContent: "Nova Meta",
     });
 
-    const _titleCurrency2 = Title.build({ textContent: "R$" });
-
-    const _joinCurrency2 = JoinCurrency.build([_titleCurrency2]);
-
-    const _joinIcProgress = JoinIcProgress.build();
-
-    const _caseProgress = CaseProgress.build([_joinIcProgress, _joinCurrency2]);
-
-    const _titleBox2 = Title.build({
-      textContent: "Metas",
-      classList: ["title", "margin-title"],
+    const _amountSmallCurrency2 = Title.build({
+      classList: ["text-amount"],
+      textContent: "100.000,00",
     });
 
-    const _walletBox2 = walletBox.build([_titleBox2, _caseProgress, _button]);
+    const _titleSmallCurrency2 = Title.build({
+      classList: ["text-currency"],
+      textContent: "R$",
+    });
 
-    const _joinIcText = JoinIcText.build({
-      title: "Carteira 01",
-      subTitle: "Nubank",
+    const _joinSmallCurrency2 = GenerateDiv.build({
+      classList: ["join-currency"],
+      children: [_titleSmallCurrency2, _amountSmallCurrency2],
+    });
+
+    const _progressBar = GenerateDiv.build({
+      classList: ["progress-bar"],
+    });
+    const _titleReserve = Title.build({
+      classList: ["title-middle", "bold"],
+      textContent: "Reserva",
+    });
+    const _joinReserve = GenerateDiv.build({
+      classList: ["join-reserve"],
+      children: [_titleReserve, _progressBar],
+    });
+
+    const _iWallet2 = Element({
+      typeElement: "img",
+      classList: ["icon"],
+      src: Images.iwallet,
+    });
+
+    const _circle2 = GenerateDiv.build({
+      classList: ["default-circle"],
+      children: [_iWallet2],
+    });
+
+    const _joinCircleReserve = GenerateDiv.build({
+      classList: ["join-icon-progress"],
+      children: [_circle2, _joinReserve],
+    });
+
+    const _goalCase = GenerateDiv.build({
+      classList: ["wallet-case", "margin-button"],
+      children: [_joinCircleReserve, _joinSmallCurrency2],
+    });
+
+    const _titleGoal = Title.build({
+      classList: ["title", "margin-title"],
+      textContent: "Metas",
+    });
+
+    const _walletGoal = GenerateDiv.build({
+      classList: ["wallet-box"],
+      children: [_titleGoal, _goalCase, _button],
+    });
+
+    const _amountSmallCurrency = Title.build({
+      classList: ["text-amount"],
+      textContent: "100.000,00",
+    });
+
+    const _titleSmallCurrency = Title.build({
+      classList: ["text-currency"],
+      textContent: "R$",
+    });
+
+    const _joinSmallCurrency = GenerateDiv.build({
+      classList: ["join-currency"],
+      children: [_titleSmallCurrency, _amountSmallCurrency],
+    });
+
+    const _walletSubTitle = Title.build({
+      classList: ["sub-title-middle"],
+      textContent: "Nubank",
+    });
+
+    const _walletTitle = Title.build({
+      classList: ["title-middle", "bold"],
+      textContent: "Carteira 01",
+    });
+
+    const _joinText = GenerateDiv.build({
+      classList: ["join-text"],
+      children: [_walletTitle, _walletSubTitle],
+    });
+
+    const _iWallet = Element({
+      typeElement: "img",
+      classList: ["icon"],
+      src: Images.iwallet,
+    });
+
+    const _circle = GenerateDiv.build({
+      classList: ["default-circle"],
+      children: [_iWallet],
+    });
+
+    const _joinCircleText = GenerateDiv.build({
+      classList: ["join-icon-text"],
+      children: [_circle, _joinText],
     });
 
     const _walletCase = GenerateDiv.build({
       classList: ["wallet-case"],
-      children: [_joinIcText, _joinCurrency2],
+      children: [_joinCircleText, _joinSmallCurrency],
     });
 
     const _walletBox = GenerateDiv.build({
@@ -75,7 +151,7 @@ const Home = {
 
     const _scrollBox = GenerateDiv.build({
       classList: ["scroll-box"],
-      children: [_walletBox, _walletBox2],
+      children: [_walletBox, _walletGoal],
     });
 
     const _totalWallet = Element({
@@ -85,13 +161,13 @@ const Home = {
     });
 
     const _subAmount = Title.build({
-      textContent: "100.000,00",
       classList: ["text-amount"],
+      textContent: "100.000,00",
     });
 
     const _titleCurrency = Title.build({
-      textContent: "R$",
       classList: ["text-currency"],
+      textContent: "R$",
     });
 
     const _joinCurrency = GenerateDiv.build({

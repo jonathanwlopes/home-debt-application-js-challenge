@@ -1,4 +1,4 @@
-import Element from "../../components/element/index.js";
+import Element from "../element/index.js";
 
 const GenerateDiv = {
   build: (props) => {
@@ -6,6 +6,7 @@ const GenerateDiv = {
       typeElement: "div",
       classList: props.classList,
       children: props.children,
+      innerHTML: props.innerHTML,
     });
 
     return _div;

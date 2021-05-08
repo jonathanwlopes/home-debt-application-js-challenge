@@ -7,7 +7,7 @@ const Nav = {
       typeElement: "ul",
       classList: ["nav-list"],
     });
-    
+
     generateMenu({
       parent: _ul,
       classList: ["income", "align-links"],
@@ -24,17 +24,13 @@ const Nav = {
       textContent: "Transferência",
     });
 
-    const _container = Element({
-      typeElement: "div",
+    const _nav = Element({
+      typeElement: "nav",
       classList: ["nav-container"],
       children: [_ul],
     });
 
-    const _nav = Element({
-      typeElement: "nav",
-      classList: ["nav-bar"],
-      children: [_container],
-    });
+
     return _nav;
   },
 };

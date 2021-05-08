@@ -1,1 +1,0 @@
-import the modals with componet 'BoxMiddle' on page.
