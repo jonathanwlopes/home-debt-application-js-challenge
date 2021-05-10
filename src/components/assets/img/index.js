@@ -6,5 +6,8 @@ const Images = {
   store: "../../img/store.png",
   iwallet: "../../img/eletronic-wallet.png",
   delete: "../../img/excluir.png",
+  add: '../../img/add.png',
+  tick: '../../img/tick.png',
+  plus: '../../img/plus.png'
 };
 export default Images;
