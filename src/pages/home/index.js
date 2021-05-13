@@ -5,11 +5,12 @@ import footer from "../../components/Footer/index.js";
 import Title from "../../components/Title/index.js";
 import GenerateDiv from "../../components/GenerateDiv/index.js";
 import importStyles from "../../utils/import/css/index.js";
+import Container from "../../components/Container/index.js";
+import AmountBox from "../../components/AmoutBox/index.js";
+import ValueTotal from "../../components/valueTotal/index.js";
 
 const Home = {
   build: () => {
-    const $root = document.querySelector("#root");
-
     importStyles({
       value: [
         StylesLink.global,
@@ -154,39 +155,16 @@ const Home = {
       children: [_walletBox, _walletGoal],
     });
 
-    const _totalWallet = Element({
-      typeElement: "img",
-      classList: ["icon"],
-      src: Images.totalWallet,
-    });
+    const _valueTotal = ValueTotal.build({});
 
-    const _subAmount = Title.build({
-      classList: ["text-amount"],
-      textContent: "100.000,00",
-    });
-
-    const _titleCurrency = Title.build({
-      classList: ["text-currency"],
-      textContent: "R$",
-    });
-
-    const _joinCurrency = GenerateDiv.build({
-      classList: ["join-currency"],
-      children: [_titleCurrency, _subAmount, _totalWallet],
-    });
-
-    const _amoutBox = GenerateDiv.build({
+    const _amoutBox = AmountBox.build({
       classList: ["amount-box"],
-      children: [_joinCurrency],
+      children: [_valueTotal],
     });
 
-    const _container = Element({
-      typeElement: "section",
-      classList: ["container"],
+    const _container = Container.build({
       children: [_amoutBox, _scrollBox, _footer],
     });
-
-    $root.appendChild(_container);
 
     return _container;
   },

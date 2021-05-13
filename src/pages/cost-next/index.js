@@ -1,5 +1,6 @@
 import Images from "../../components/assets/img/index.js";
 import StylesLink from "../../components/assets/Styles/index.js";
+import Container from "../../components/Container/index.js";
 import Element from "../../components/element/index.js";
 import Footer from "../../components/Footer/index.js";
 import GenerateDiv from "../../components/GenerateDiv/index.js";
@@ -9,8 +10,6 @@ import importStyles from "../../utils/import/css/index.js";
 
 const CostNext = {
   build: () => {
-    const $root = document.querySelector("#root");
-
     importStyles({
       value: [
         StylesLink.global,
@@ -300,12 +299,9 @@ const CostNext = {
 
     const _nav = Nav.build();
 
-    const _container = GenerateDiv.build({
-      classList: ["container"],
+    const _container = Container.build({
       children: [_nav, _costBox, _footer],
     });
-
-    $root.appendChild(_container);
 
     return _container;
   },

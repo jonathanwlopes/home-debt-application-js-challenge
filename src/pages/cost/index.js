@@ -1,16 +1,18 @@
+import AmountBox from "../../components/AmoutBox/index.js";
 import StylesLink from "../../components/assets/Styles/index.js";
+import Container from "../../components/Container/index.js";
 import Element from "../../components/element/index.js";
 import Footer from "../../components/Footer/index.js";
 import GenerateDiv from "../../components/GenerateDiv/index.js";
 import Keyboard from "../../components/Keyboard/index.js";
 import Nav from "../../components/Nav/index.js";
 import Title from "../../components/Title/index.js";
+import ValueTotal from "../../components/valueTotal/index.js";
+import ValueTotalNegative from "../../components/ValueTotalNegative/index.js";
 import importStyles from "../../utils/import/css/index.js";
 
 const Cost = {
   build: () => {
-    const $root = document.querySelector("#root");
-
     importStyles({
       value: [
         StylesLink.global,
@@ -43,35 +45,20 @@ const Cost = {
       children: [_keyboard, _button],
     });
 
-    const _subAmount = Title.build({
-      textContent: "100.000,00",
-      classList: ["text-amount", "negative-color"],
-    });
 
-    const _titleCurrency = Title.build({
-      classList: ["text-currency", "negative-color", "bold"],
-      textContent: "R$",
-    });
 
-    const _joinCurrency = GenerateDiv.build({
-      classList: ["join-currency"],
-      children: [_titleCurrency, _subAmount],
-    });
+    const _valueTotalNegative = ValueTotalNegative.build();
 
-    const _amoutBox = GenerateDiv.build({
+    const _amoutBox = AmountBox.build({
       classList: ["amount-box", "amount-box-gray"],
-      children: [_joinCurrency],
+      children: [_valueTotalNegative],
     });
 
     const _nav = Nav.build();
 
-    const _container = Element({
-      typeElement: "section",
-      classList: ["container"],
+    const _container = Container.build({
       children: [_nav, _amoutBox, _costBox, _footer],
     });
-
-    $root.appendChild(_container);
 
     return _container;
   },
