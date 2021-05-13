@@ -1,31 +1,32 @@
 import Images from "../../../components/assets/img/index.js";
-import StylesLink from "../../../components/assets/Styles/index.js";
 import Container from "../../../components/Container/index.js";
 import Element from "../../../components/element/index.js";
 import GenerateDiv from "../../../components/GenerateDiv/index.js";
 import Keyboard from "../../../components/Keyboard/index.js";
 import Title from "../../../components/Title/index.js";
-import importStyles from "../../../utils/import/css/index.js";
+import Links from "../../../utils/import/css/data/index.js";
+import Styles from "../../../utils/import/css/index.js";
+
 
 const GoalModal = {
   build: () => {
-    importStyles({
+    Styles({
       value: [
-        StylesLink.global,
-        StylesLink.container,
-        StylesLink.modalBox,
-        StylesLink.walletBox,
-        StylesLink.walletCase,
-        StylesLink.fieldCaseGoal,
-        StylesLink.endOfGoal,
-        StylesLink.keyboardButton,
-        StylesLink.keyboard,
-        StylesLink.shared.circle,
-        StylesLink.shared.icon,
-        StylesLink.shared.text,
-        StylesLink.shared.input,
-        StylesLink.shared.button,
-        StylesLink.shared.colors,
+        Links.global,
+        Links.container,
+        Links.modalBox,
+        Links.walletBox,
+        Links.walletCase,
+        Links.fieldCaseGoal,
+        Links.endOfGoal,
+        Links.shared.keyboardButton,
+        Links.keyboard,
+        Links.shared.circle,
+        Links.shared.icon,
+        Links.shared.text,
+        Links.shared.input,
+        Links.shared.button,
+        Links.shared.colors,
       ],
     });
 

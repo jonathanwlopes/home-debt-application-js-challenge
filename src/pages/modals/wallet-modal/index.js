@@ -1,23 +1,24 @@
 import Images from "../../../components/assets/img/index.js";
-import StylesLink from "../../../components/assets/Styles/index.js";
+
 import Container from "../../../components/Container/index.js";
 import Element from "../../../components/element/index.js";
 import GenerateDiv from "../../../components/GenerateDiv/index.js";
 import Title from "../../../components/Title/index.js";
-import importStyles from "../../../utils/import/css/index.js";
+import Links from "../../../utils/import/css/data/index.js";
+import Styles from "../../../utils/import/css/index.js";
 
 const WalletModal = {
   build: () => {
-    importStyles({
+    Styles({
       value: [
-        StylesLink.global,
-        StylesLink.container,
-        StylesLink.modalBox,
-        StylesLink.walletBox,
-        StylesLink.walletCase,
-        StylesLink.shared.text,
-        StylesLink.shared.icon,
-        StylesLink.shared.circle,
+        Links.global,
+        Links.container,
+        Links.modalBox,
+        Links.walletBox,
+        Links.walletCase,
+        Links.shared.text,
+        Links.shared.icon,
+        Links.shared.circle,
       ],
     });
 

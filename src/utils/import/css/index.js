@@ -1,6 +1,6 @@
 import Element from "../../../components/element/index.js";
 
-const importStyles = (href) => {
+const Styles = (href) => {
   const { value } = href;
 
   const $head = document.querySelector("head");
@@ -18,4 +18,4 @@ const importStyles = (href) => {
   }
 };
 
-export default importStyles;
+export default Styles;
