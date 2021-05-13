@@ -1,50 +1,36 @@
-import Footer from "../../components/Footer/index.js";
-import Title from "../../components/Title/index.js";
-import Container from "../../components/Container/index.js";
 import AmountBox from "../../components/AmoutBox/index.js";
-import ValueTotal from "../../components/valueTotal/index.js";
+import Container from "../../components/Container/index.js";
+import Footer from "../../components/Footer/index.js";
 import ScrollBox from "../../components/ScrollBox/index.js";
+import Title from "../../components/Title/index.js";
+import ValueTotal from "../../components/valueTotal/index.js";
 import MiddleBox from "../../components/MiddleBox/index.js";
-import WalletCase from "../../components/WalletCase/index.js";
-import ReserveCase from "../../components/reserveCase/index.js";
-import Button from "../../components/shared/Button/index.js";
+import BillsCase from "../../components/BillsCase/index.js";
 import Styles from "../../utils/import/css/index.js";
 import Links from "../../utils/import/css/data/index.js";
 import db_Bills from "../../components/data/index.js";
 
-const Home = {
+const Bills = {
   build: () => {
-    Styles({ value: [Links.global, Links.styles] });
+    Styles({value: [Links.global, Links.styles]});
 
     const user = db_Bills.getUserById(2);
 
     const _footer = Footer.build();
 
-    const _button = Button.build({
-      textContent: "Nova Meta",
+    const _billsCase = BillsCase.build();
+
+    const _titleDate = Title.build({
+      classList: ["title-middle", "bold", "margin-date"],
+      textContent: "20/05",
     });
 
-    const _reserveCase = ReserveCase.build();
-
-    const _titleGoal = Title.build({
-      classList: ["title", "margin-title"],
-      textContent: "Metas",
-    });
-
-    const _goalBox = MiddleBox.build({
-      children: [_titleGoal, _reserveCase, _button],
-    });
-
-    const _walletCase = WalletCase.build({
-      classList: ["wallet-case"],
-    });
-
-    const _walletBox = MiddleBox.build({
-      children: [_walletCase],
+    const _billsBox = MiddleBox.build({
+      children: [_titleDate, _billsCase],
     });
 
     const _scrollBox = ScrollBox.build({
-      children: [_walletBox, _goalBox],
+      children: [_billsBox],
     });
 
     const _valueTotal = ValueTotal.build({
@@ -67,4 +53,4 @@ const Home = {
   },
 };
 
-export default Home;
+export default Bills;

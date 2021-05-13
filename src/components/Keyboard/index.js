@@ -1,47 +1,56 @@
 import Images from "../assets/img/index.js";
 import Element from "../element/index.js";
-import GenerateDiv from "../GenerateDiv/index.js";
 
 const Keyboard = {
   build: () => {
-    const _btn0 = GenerateDiv.build({
+    const _btn0 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "0",
     });
 
-    const _btn9 = GenerateDiv.build({
+    const _btn9 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "9",
     });
-    const _btn8 = GenerateDiv.build({
+    const _btn8 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "8",
     });
-    const _btn7 = GenerateDiv.build({
+    const _btn7 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "7",
     });
-    const _btn6 = GenerateDiv.build({
+    const _btn6 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "6",
     });
-    const _btn5 = GenerateDiv.build({
+    const _btn5 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "5",
     });
-    const _btn4 = GenerateDiv.build({
+    const _btn4 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "4",
     });
-    const _btn3 = GenerateDiv.build({
+    const _btn3 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "3",
     });
-    const _btn2 = GenerateDiv.build({
+    const _btn2 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "2",
     });
-    const _btn1 = GenerateDiv.build({
+    const _btn1 = Element({
+      typeElement: "div",
       classList: ["keyboard-button"],
       innerHTML: "1",
     });

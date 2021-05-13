@@ -4,6 +4,7 @@ import Title from "../Title/index.js";
 
 const ValueTotal = {
   build: (props) => {
+
     const _iconWallet = Element({
       typeElement: "img",
       classList: ["icon"],
@@ -12,21 +13,21 @@ const ValueTotal = {
 
     const _titleValue = Title.build({
       classList: ["text-amount"],
-      textContent: "100.000,00",
+      textContent: props.totalValue
     });
 
     const _titleCurrency = Title.build({
       classList: ["text-currency"],
-      textContent: "R$",
+      textContent: props.currency
     });
 
-    const _joinValueTotal = Element({
+    const _valueTotal = Element({
       typeElement: "div",
       classList: ["join-currency"],
       children: [_titleCurrency, _titleValue, _iconWallet],
     });
 
-    return _joinValueTotal;
+    return _valueTotal;
   },
 };
 

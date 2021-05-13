@@ -1,8 +1,0 @@
-.close{
-  cursor: pointer;
-  color: #53A9FF;
-}
-
-.close:hover{
-  transform: matrix(0, 1, -1, 0, 0, 0);
-}

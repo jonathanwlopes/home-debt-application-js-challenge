@@ -6,7 +6,8 @@ const db_Bills = {
       _id: 1,
       name: "Jonathan",
       lastName: "Lopes",
-      totalValue: 1000,
+      totalValue: 10000,
+      currency: 'R$',
       wallets: [
         {
           _id: 50,
@@ -35,13 +36,14 @@ const db_Bills = {
       _id: 2,
       name: "Marcos",
       lastName: "Maia",
-      totalValue: 1000,
+      totalValue: 1000.97,
+      currency: '$',
       wallets: [
         {
           _id: 50,
           type: "Dinheiro",
           flag: "Dolar",
-          credit: 1000,
+          credit: 15000,
           bills: [
             {
               _id: 100,

@@ -1,7 +1,6 @@
 import Images from "../../../components/assets/img/index.js";
 import Container from "../../../components/Container/index.js";
 import Element from "../../../components/element/index.js";
-import GenerateDiv from "../../../components/GenerateDiv/index.js";
 import Keyboard from "../../../components/Keyboard/index.js";
 import Title from "../../../components/Title/index.js";
 import Links from "../../../utils/import/css/data/index.js";
@@ -10,25 +9,7 @@ import Styles from "../../../utils/import/css/index.js";
 
 const GoalModal = {
   build: () => {
-    Styles({
-      value: [
-        Links.global,
-        Links.container,
-        Links.modalBox,
-        Links.walletBox,
-        Links.walletCase,
-        Links.fieldCaseGoal,
-        Links.endOfGoal,
-        Links.shared.keyboardButton,
-        Links.keyboard,
-        Links.shared.circle,
-        Links.shared.icon,
-        Links.shared.text,
-        Links.shared.input,
-        Links.shared.button,
-        Links.shared.colors,
-      ],
-    });
+    Styles({value: [Links.global, Links.styles]});
 
     const _button = Element({
       typeElement: "button",
@@ -42,8 +23,9 @@ const GoalModal = {
       classList: ["title-middle"],
       textContent: "R$ 100,00",
     });
-    const _fieldCase = GenerateDiv.build({
-      classList: ["field-case"],
+    const _fieldCase = Element({
+      typeElement: "div",
+      classList: ["field-case", 'field-case-background'],
       children: [_titleField],
     });
 
@@ -59,7 +41,8 @@ const GoalModal = {
       classList: ["title-middle"],
       textContent: "Final da Meta",
     });
-    const _joinEndGoal = GenerateDiv.build({
+    const _joinEndGoal = Element({
+      typeElement: 'div',
       classList: ["wrapper-end-goal"],
       children: [_title, _inputDate],
     });
@@ -89,7 +72,8 @@ const GoalModal = {
       textContent: "Categoria",
     });
 
-    const _joinText = GenerateDiv.build({
+    const _joinText = Element({
+      typeElement: "div",
       classList: ["join-text"],
       children: [_walletTitle, _walletSubTitle],
     });
@@ -100,22 +84,26 @@ const GoalModal = {
       src: Images.iwallet,
     });
 
-    const _circle = GenerateDiv.build({
+    const _circle = Element({
+      typeElement: "div",
       classList: ["default-circle"],
       children: [_iWallet],
     });
 
-    const _joinCircleText = GenerateDiv.build({
+    const _joinCircleText = Element({
+      typeElement: "div",
       classList: ["join-icon-text"],
       children: [_circle, _joinText],
     });
 
-    const _walletCase = GenerateDiv.build({
+    const _walletCase = Element({
+      typeElement: "div",
       classList: ["wallet-case", "blue"],
       children: [_joinCircleText, _addCategory],
     });
 
-    const _modalBox = GenerateDiv.build({
+    const _modalBox = Element({
+      typeElement: "div",
       classList: ["modal-box"],
       children: [
         _walletCase,

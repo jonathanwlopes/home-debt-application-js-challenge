@@ -1,23 +1,14 @@
-import Images from "../assets/img/index.js";
+import db_Bills from "../data/index.js";
 import Element from "../element/index.js";
+import SmallCurrency from "../shared/SmallCurrency/index.js";
+import WalletIcon from "../shared/WalletIcon/index.js";
 import Title from "../Title/index.js";
 
 const WalletCase = {
   build: (props) => {
-    const _amountSmallCurrency = Title.build({
-      classList: ["text-amount"],
-      textContent: "100.000,00",
-    });
-
-    const _titleSmallCurrency = Title.build({
-      classList: ["text-currency"],
-      textContent: "R$",
-    });
-
-    const _joinSmallCurrency = Element({
-      typeElement: "div",
-      classList: ["join-currency"],
-      children: [_titleSmallCurrency, _amountSmallCurrency],
+    const _smallCurrency = SmallCurrency.build({
+      value: "100.00,00",
+      coin: "R$",
     });
 
     const _walletSubTitle = Title.build({
@@ -36,28 +27,18 @@ const WalletCase = {
       children: [_walletTitle, _walletSubTitle],
     });
 
-    const _iWallet = Element({
-      typeElement: "img",
-      classList: ["icon"],
-      src: Images.iwallet,
-    });
+    const _walletIcon = WalletIcon.build();
 
-    const _circle = Element({
-      typeElement: "div",
-      classList: ["default-circle"],
-      children: [_iWallet],
-    });
-
-    const _joinCircleText = Element({
+    const _joinIconText = Element({
       typeElement: "div",
       classList: ["join-icon-text"],
-      children: [_circle, _joinText],
+      children: [_walletIcon, _joinText],
     });
 
     const _walletCase = Element({
       typeElement: "div",
       classList: props.classList,
-      children: [_joinCircleText, _joinSmallCurrency],
+      children: [_joinIconText, _smallCurrency],
     });
 
     return _walletCase;
