@@ -17,6 +17,8 @@ const Home = {
     Styles({ value: [Links.global, Links.styles] });
 
     const user = db_Bills.getUserById(2);
+    const wallet = db_Bills.getWalletById(1,51)
+    console.log(wallet.type);
 
     const _footer = Footer.build();
 
