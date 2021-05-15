@@ -1,14 +1,11 @@
 import Images from "../assets/img/index.js";
-import db_Bills from "../data/index.js";
 import Element from "../element/index.js";
 import Title from "../Title/index.js";
 
 const ReserveCase = {
   build: () => {
 
-    const goalsList = db_Bills.getGoals()
-    console.log(goalsList);
-    
+
     const _amountSmallCurrency2 = Title.build({
       classList: ["text-amount"],
       textContent: "100.000,00",
