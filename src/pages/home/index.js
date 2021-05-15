@@ -17,13 +17,15 @@ const Home = {
     Styles({ value: [Links.global, Links.styles] });
 
     const user = db_Bills.getUserById(2);
-    const wallet = db_Bills.getWalletById(1,51)
-    console.log(wallet.type);
 
     const _footer = Footer.build();
 
     const _button = Button.build({
       textContent: "Nova Meta",
+    });
+
+    _button.addEventListener("click", () => {
+      console.error("include modal in this function");
     });
 
     const _reserveCase = ReserveCase.build();

@@ -48,29 +48,44 @@ const db_Bills = {
       _id: 2,
       name: "Marcos",
       lastName: "Maia",
-      totalValue: 1000.97,
+      totalValue: 60000,
       currency: "$",
       wallets: [
         {
-          _id: 50,
+          _id: 100,
+          type: "Poupança",
+          bank: "Caixa",
+          credit: 50000,
+          currency: "R$",
+        },
+        {
+          _id: 101,
+          type: "Corrente",
+          bank: "Santander",
+          credit: 500000,
+          currency: "R$",
+        },
+        {
+          _id: 102,
           type: "Dinheiro",
-          flag: "Dolar",
-          credit: 15000,
-          bills: [
-            {
-              _id: 100,
-              type: "Água",
-              value: 100,
-            },
-          ],
+          bank: "Corrente",
+          credit: 500,
+          currency: "R$",
+        },
+      ],
+      bills: [
+        {
+          _id: 1000,
+          type: "Luz",
+          value: 200,
         },
       ],
       goals: [
         {
-          _id: 100,
+          _id: 5000,
           goal: "Casa",
-          totalValue: 1000000,
-          amountValue: 22000,
+          totalValue: 100000,
+          amountValue: 2000,
         },
       ],
     },
@@ -109,15 +124,15 @@ const db_Bills = {
   },
 
   getWalletById: (userId, walletId) => {
-    const walletList = db_Bills.getWallets(userId)
-    
+    const walletList = db_Bills.getWallets(userId);
+
     const wallet = walletList.find((wallet) => {
-      if(wallet._id === walletId){
-        return wallet
+      if (wallet._id === walletId) {
+        return wallet;
       }
-    })
-    
-    return wallet
+    });
+
+    return wallet;
   },
 
   createWallet: (userId, wallet) => {
@@ -136,6 +151,11 @@ const db_Bills = {
     db_Bills.userList = newUserList;
 
     return newUserList;
+  },
+
+  getGoalsById: (userId, goalsId) => {
+
+
   },
 
   getBills: (walletId) => {

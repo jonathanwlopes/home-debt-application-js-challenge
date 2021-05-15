@@ -5,12 +5,12 @@ const SmallCurrency = {
   build: (props) => {
     const _amountSmallCurrency = Title.build({
       classList: ["text-amount"],
-      textContent: props.value
+      textContent: props.value,
     });
 
     const _titleSmallCurrency = Title.build({
       classList: ["text-currency"],
-      textContent: props.coin
+      textContent: props.currency,
     });
 
     const _smallCurrency = Element({
@@ -23,4 +23,4 @@ const SmallCurrency = {
   },
 };
 
-export default SmallCurrency
+export default SmallCurrency;

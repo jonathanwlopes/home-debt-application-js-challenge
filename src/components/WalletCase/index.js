@@ -6,19 +6,24 @@ import Title from "../Title/index.js";
 
 const WalletCase = {
   build: (props) => {
+    const wallet = db_Bills.getWalletById(2,100)
+    
+
     const _smallCurrency = SmallCurrency.build({
-      value: "100.00,00",
-      coin: "R$",
+      value: wallet.credit.toLocaleString("pt-br", {
+        minimumFractionDigits: 2,
+      }),
+      currency: wallet.currency
     });
 
     const _walletSubTitle = Title.build({
       classList: ["sub-title-middle"],
-      textContent: "Nubank",
+      textContent: wallet.bank,
     });
 
     const _walletTitle = Title.build({
       classList: ["title-middle", "bold"],
-      textContent: "Carteira 01",
+      textContent: wallet.type,
     });
 
     const _joinText = Element({
