@@ -30,15 +30,22 @@ const db_Bills = {
       ],
       bills: [
         {
-          _id: 100,
+          _id: 300,
           type: "Luz",
           value: 200,
+          pay: "Pendente",
+        },
+        {
+          _id: 301,
+          type: "Água",
+          value: 100,
+          pay: "Paga",
         },
       ],
       goals: [
         {
-          _id: 100,
-          goal: "Casa",
+          _id: 6000,
+          goal: "Faculdade",
           totalValue: 100000,
           amountValue: 2000,
         },
@@ -56,28 +63,34 @@ const db_Bills = {
           type: "Poupança",
           bank: "Caixa",
           credit: 50000,
-          currency: "R$",
         },
         {
           _id: 101,
           type: "Corrente",
           bank: "Santander",
           credit: 500000,
-          currency: "R$",
         },
         {
           _id: 102,
           type: "Dinheiro",
           bank: "Corrente",
           credit: 500,
-          currency: "R$",
         },
       ],
       bills: [
         {
-          _id: 1000,
+          _id: 200,
           type: "Luz",
           value: 200,
+          dueDate: new Date(2021, 11, 17),
+          pay: "Pendente",
+        },
+        {
+          _id: 201,
+          type: "Água",
+          dueDate: new Date(2021, 11, 17),
+          value: 100,
+          pay: "Paga",
         },
       ],
       goals: [
@@ -86,6 +99,12 @@ const db_Bills = {
           goal: "Casa",
           totalValue: 100000,
           amountValue: 2000,
+        },
+        {
+          _id: 5001,
+          goal: "Mobilia",
+          totalValue: 60000,
+          amountValue: 3000,
         },
       ],
     },
@@ -153,21 +172,34 @@ const db_Bills = {
     return newUserList;
   },
 
-  getGoalsById: (userId, goalsId) => {
+  getGoals: (userId) => {
+    const user = db_Bills.getUserById(userId);
 
+    const goalList = [...user.goals];
 
+    return goalList;
   },
 
-  getBills: (walletId) => {
-    const userList = db_Bills.getUsers();
+  getGoalById: (userId, goalId) => {
+    const goalList = db_Bills.getGoals(userId);
 
-    const user = userList.find((user) =>
-      user.wallets.some((wallet) => wallet._id === walletId)
-    );
+    const goal = goalList.find((goal) => goal._id === goalId);
 
-    const wallet = user.wallets.find((wallet) => wallet._id === walletId);
+    return goal;
+  },
 
-    const bills = wallet.bills;
+  getBills: (userId) => {
+    const userList = db_Bills.getUserById(userId);
+
+    const billsList = [...userList.bills];
+
+    return billsList;
+  },
+
+  getBillsById: (userId, billsId) => {
+    const billsList = db_Bills.getBills(userId);
+
+    const bills = billsList.find((bills) => bills._id === billsId);
 
     return bills;
   },

@@ -16,13 +16,15 @@ const Bills = {
 
     const user = db_Bills.getUserById(2);
 
+
+
     const _footer = Footer.build();
 
     const _billsCase = BillsCase.build();
 
     const _titleDate = Title.build({
       classList: ["title-middle", "bold", "margin-date"],
-      textContent: "20/05",
+      textContent: new Date().toLocaleDateString('pt-BR', {timeZone: 'UTC'})
     });
 
     const _billsBox = MiddleBox.build({

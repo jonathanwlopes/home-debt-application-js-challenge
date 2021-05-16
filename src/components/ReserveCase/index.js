@@ -1,35 +1,42 @@
 import Images from "../assets/img/index.js";
+import db_Bills from "../data/index.js";
 import Element from "../element/index.js";
 import Title from "../Title/index.js";
 
 const ReserveCase = {
   build: () => {
+    const user = db_Bills.getUserById(2);
 
+    const goal = db_Bills.getGoalById(2, 5001);
 
-    const _amountSmallCurrency2 = Title.build({
+    const _amountSmallCurrency = Title.build({
       classList: ["text-amount"],
-      textContent: "100.000,00",
+      textContent: goal.amountValue.toLocaleString("pt-br", {
+        minimumFractionDigits: 2,
+      }),
     });
 
-    const _titleSmallCurrency2 = Title.build({
+    const _titleSmallCurrency = Title.build({
       classList: ["text-currency"],
-      textContent: "R$",
+      textContent: user.currency,
     });
 
-    const _joinSmallCurrency2 = Element({
+    const _joinSmallCurrency = Element({
       typeElement: "div",
       classList: ["join-currency"],
-      children: [_titleSmallCurrency2, _amountSmallCurrency2],
+      children: [_titleSmallCurrency, _amountSmallCurrency],
     });
 
     const _progressBar = Element({
       typeElement: "div",
       classList: ["progress-bar"],
     });
+
     const _titleReserve = Title.build({
       classList: ["title-middle", "bold"],
       textContent: "Reserva",
     });
+
     const _joinReserve = Element({
       typeElement: "div",
       classList: ["join-reserve"],
@@ -57,7 +64,7 @@ const ReserveCase = {
     const _reserveCase = Element({
       typeElement: "div",
       classList: ["wallet-case", "margin-button"],
-      children: [_joinCircleReserve, _joinSmallCurrency2],
+      children: [_joinCircleReserve, _joinSmallCurrency],
     });
 
     return _reserveCase;

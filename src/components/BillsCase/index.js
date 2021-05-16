@@ -1,17 +1,22 @@
 import Images from "../assets/img/index.js";
+import db_Bills from "../data/index.js";
 import Element from "../element/index.js";
 import Title from "../Title/index.js";
 
 const BillsCase = {
   build: () => {
+    const bills = db_Bills.getBillsById(2, 200);
+
     const _amountSmallCurrency = Title.build({
       classList: ["title-small"],
-      textContent: "não pago",
+      textContent: bills.pay,
     });
 
     const _titleSmallCurrency = Title.build({
       classList: ["title-middle", "bold"],
-      textContent: "-100",
+      textContent: bills.value.toLocaleString("pt-br", {
+        minimumFractionDigits: 2,
+      }),
     });
 
     const _joinSmallCurrency = Element({
@@ -27,7 +32,7 @@ const BillsCase = {
 
     const _walletTitle = Title.build({
       classList: ["title-middle", "bold"],
-      textContent: "Tipo",
+      textContent: bills.type,
     });
 
     const _joinText = Element({

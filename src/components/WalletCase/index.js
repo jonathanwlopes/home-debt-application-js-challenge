@@ -6,6 +6,8 @@ import Title from "../Title/index.js";
 
 const WalletCase = {
   build: (props) => {
+
+    const user = db_Bills.getUserById(2)
     const wallet = db_Bills.getWalletById(2,100)
     
 
@@ -13,7 +15,7 @@ const WalletCase = {
       value: wallet.credit.toLocaleString("pt-br", {
         minimumFractionDigits: 2,
       }),
-      currency: wallet.currency
+      currency: user.currency
     });
 
     const _walletSubTitle = Title.build({
