@@ -5,8 +5,7 @@ const generateMenu = (props) => {
     typeElement: "a",
     classList: ["link"],
     attribute: {
-      frist: ["href", "#"],
-      second: ["a", "b"], // BUG FIX
+      href: "#",
     },
     textContent: props.textContent,
   });

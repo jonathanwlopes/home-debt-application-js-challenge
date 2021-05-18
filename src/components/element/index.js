@@ -13,8 +13,9 @@ const Element = (props) => {
   if (props.children) _element.append(...props.children);
 
   if (props.attribute) {
-    _element.setAttribute(props.attribute.frist[0], props.attribute.frist[1]);
-    _element.setAttribute(props.attribute.second[0], props.attribute.second[1]);
+    const keysList = Object.keys(props.attribute);
+
+    keysList.forEach((key) => _element.setAttribute(key, props.attribute[key]));
   }
 
   if (props.textContent) _element.textContent = props.textContent;

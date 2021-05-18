@@ -6,10 +6,9 @@ import Title from "../../../components/Title/index.js";
 import Links from "../../../utils/import/css/data/index.js";
 import Styles from "../../../utils/import/css/index.js";
 
-
 const GoalModal = {
   build: () => {
-    Styles({value: [Links.global, Links.styles]});
+    Styles({ value: [Links.global, Links.styles] });
 
     const _button = Element({
       typeElement: "button",
@@ -25,7 +24,7 @@ const GoalModal = {
     });
     const _fieldCase = Element({
       typeElement: "div",
-      classList: ["field-case", 'field-case-background'],
+      classList: ["field-case", "field-case-background"],
       children: [_titleField],
     });
 
@@ -33,8 +32,8 @@ const GoalModal = {
       typeElement: "input",
       classList: ["input-default"],
       attribute: {
-        frist: ["type", "data"],
-        second: ["placeholder", "14/05/2021"],
+        type: "data",
+        placeholder: "14/05/2021",
       },
     });
     const _title = Title.build({
@@ -42,7 +41,7 @@ const GoalModal = {
       textContent: "Final da Meta",
     });
     const _joinEndGoal = Element({
-      typeElement: 'div',
+      typeElement: "div",
       classList: ["wrapper-end-goal"],
       children: [_title, _inputDate],
     });
@@ -51,8 +50,8 @@ const GoalModal = {
       typeElement: "input",
       classList: ["input-default", "width-big"],
       attribute: {
-        frist: ["placeholder", "Nome da Meta"],
-        second: ["type", "text"],
+        type: "text",
+        placeholder: "Nome da Meta",
       },
     });
 

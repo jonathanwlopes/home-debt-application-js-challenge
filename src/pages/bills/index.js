@@ -12,11 +12,9 @@ import db_Bills from "../../components/data/index.js";
 
 const Bills = {
   build: () => {
-    Styles({value: [Links.global, Links.styles]});
+    Styles({ value: [Links.global, Links.styles] });
 
     const user = db_Bills.getUserById(2);
-
-
 
     const _footer = Footer.build();
 
@@ -24,7 +22,7 @@ const Bills = {
 
     const _titleDate = Title.build({
       classList: ["title-middle", "bold", "margin-date"],
-      textContent: new Date().toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+      textContent: new Date().toLocaleDateString("pt-BR", { timeZone: "UTC" }),
     });
 
     const _billsBox = MiddleBox.build({

@@ -9,8 +9,8 @@ const Styles = (href) => {
     const newStyles = Element({
       typeElement: "link",
       attribute: {
-        frist: ["rel", "stylesheet"],
-        second: ["href", value[i]],
+        rel: "stylesheet",
+        href: value[i],
       },
     });
 

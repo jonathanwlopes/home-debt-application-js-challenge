@@ -24,15 +24,15 @@ const ElementTest = (props) => {
     return false;
   }
 
-  if(props.attribute && typeof props.attribute.frist != 'object'){
-    console.error("Element error: props.attribute.frist object required!");
-    return false
-  }
+  // if(props.attribute && typeof props.attribute.frist != 'object'){
+  //   console.error("Element error: props.attribute.frist object required!");
+  //   return false
+  // }
 
-  if(props.attribute && typeof props.attribute.second != 'object'){
-    console.error("Element error: props.attribute.second object required!");
-    return false
-  }
+  // if(props.attribute && typeof props.attribute.second != 'object'){
+  //   console.error("Element error: props.attribute.second object required!");
+  //   return false
+  // }
 
   return true;
 };

@@ -5,18 +5,18 @@ import Title from "../Title/index.js";
 
 const BillsCase = {
   build: () => {
-    const bills = db_Bills.getBillsById(2, 200);
+    const bills = db_Bills.getBillsById(2, 201);
 
     const _amountSmallCurrency = Title.build({
       classList: ["title-small"],
-      textContent: bills.pay,
+      textContent: bills.pay ? 'Paga' : 'Pendente',
     });
 
     const _titleSmallCurrency = Title.build({
       classList: ["title-middle", "bold"],
       textContent: bills.value.toLocaleString("pt-br", {
         minimumFractionDigits: 2,
-      }),
+      }), 
     });
 
     const _joinSmallCurrency = Element({

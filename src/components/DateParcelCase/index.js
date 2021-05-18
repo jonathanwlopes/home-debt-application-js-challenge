@@ -36,8 +36,8 @@ const DateParcelCase = {
       typeElement: "input",
       classList: ["input-default"],
       attribute: {
-        frist: ["type", "text"],
-        second: ["placeholder", "1 Vez"],
+        type: "text",
+        placeholder: "1 Vez",
       },
     });
 
@@ -62,8 +62,7 @@ const DateParcelCase = {
       typeElement: "input",
       classList: ["input-default"],
       attribute: {
-        frist: ["type", "date"],
-        second: ["a", "b"], // BUG FIX
+        type: "date",
       },
     });
 

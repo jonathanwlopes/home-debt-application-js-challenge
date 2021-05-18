@@ -14,7 +14,7 @@ import Styles from "../../utils/import/css/index.js";
 
 const CostNext = {
   build: () => {
-    Styles({value: [Links.global, Links.styles]});
+    Styles({ value: [Links.global, Links.styles] });
 
     const _footer = Footer.build();
 
@@ -26,8 +26,7 @@ const CostNext = {
       typeElement: "textarea",
       classList: ["text-area"],
       attribute: {
-        frist: ["placeholder", "Obs"],
-        second: [], // BUG FIX
+        placeholder: "Obs",
       },
     });
 

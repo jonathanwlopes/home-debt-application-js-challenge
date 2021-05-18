@@ -33,13 +33,13 @@ const db_Bills = {
           _id: 300,
           type: "Luz",
           value: 200,
-          pay: "Pendente",
+          pay: false,
         },
         {
           _id: 301,
           type: "Água",
           value: 100,
-          pay: "Paga",
+          pay: true,
         },
       ],
       goals: [
@@ -83,14 +83,14 @@ const db_Bills = {
           type: "Luz",
           value: 200,
           dueDate: new Date(2021, 11, 17),
-          pay: "Pendente",
+          pay: false,
         },
         {
           _id: 201,
           type: "Água",
           dueDate: new Date(2021, 11, 17),
           value: 100,
-          pay: "Paga",
+          pay: false,
         },
       ],
       goals: [
