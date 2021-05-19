@@ -45,8 +45,8 @@ const db_Bills = {
       goals: [
         {
           _id: 6000,
-          goal: "Faculdade",
-          totalValue: 100000,
+          name: "Faculdade",
+          totalValue: 10000,
           amountValue: 2000,
         },
       ],
@@ -55,20 +55,20 @@ const db_Bills = {
       _id: 2,
       name: "Marcos",
       lastName: "Maia",
-      totalValue: 60000,
+      totalValue: 6000,
       currency: "$",
       wallets: [
         {
           _id: 100,
           type: "Poupança",
           bank: "Caixa",
-          credit: 50000,
+          credit: 500,
         },
         {
           _id: 101,
           type: "Corrente",
           bank: "Santander",
-          credit: 500000,
+          credit: 500,
         },
         {
           _id: 102,
@@ -96,14 +96,14 @@ const db_Bills = {
       goals: [
         {
           _id: 5000,
-          goal: "Casa",
-          totalValue: 100000,
+          name: "Casa",
+          totalValue: 90000,
           amountValue: 2000,
         },
         {
           _id: 5001,
-          goal: "Mobilia",
-          totalValue: 60000,
+          name: "Mobilia",
+          totalValue: 6000,
           amountValue: 3000,
         },
       ],
@@ -186,6 +186,17 @@ const db_Bills = {
     const goal = goalList.find((goal) => goal._id === goalId);
 
     return goal;
+  },
+
+  createGoal: (userId, goal) => {
+    const user = db_Bills.getUserById(userId);
+    const goalList = db_Bills.getGoals(userId);
+
+    goalList.push(goal);
+
+    user.goals = [...goalList];
+
+    console.log(goalList);
   },
 
   getBills: (userId) => {

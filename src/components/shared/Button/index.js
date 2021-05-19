@@ -4,8 +4,9 @@ const Button = {
   build: (props) => {
     const _button = Element({
       typeElement: "button",
-      classList: ["default-button"],
+      classList: props.classList,
       textContent: props.textContent,
+      innerHTML: props.innerHTML
     });
 
     return _button;

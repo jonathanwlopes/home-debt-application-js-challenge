@@ -19,6 +19,7 @@ const CostNext = {
     const _footer = Footer.build();
 
     const _button = Button.build({
+      classList: ['default-button'],
       textContent: "Concluir",
     });
 

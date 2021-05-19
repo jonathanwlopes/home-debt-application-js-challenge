@@ -26,7 +26,7 @@ const FieldCase = {
 
     const _fieldCase = Element({
       typeElement: "div",
-      classList: ["field-case"],
+      classList: ["typed-case"],
       children: [_close, _joinCurrency],
     });
 

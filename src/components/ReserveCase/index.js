@@ -1,30 +1,15 @@
-import Images from "../assets/img/index.js";
-import db_Bills from "../data/index.js";
 import Element from "../element/index.js";
+import SmallCurrency from "../shared/SmallCurrency/index.js";
+import WalletIcon from "../shared/WalletIcon/index.js";
 import Title from "../Title/index.js";
 
 const ReserveCase = {
-  build: () => {
-    const user = db_Bills.getUserById(2);
-
-    const goal = db_Bills.getGoalById(2, 5001);
-
-    const _amountSmallCurrency = Title.build({
-      classList: ["text-amount"],
-      textContent: goal.amountValue.toLocaleString("pt-br", {
+  build: (props) => {
+    const _smallCurrency = SmallCurrency.build({
+      value: props.totalValue.toLocaleString("pt-br", {
         minimumFractionDigits: 2,
-      }),
-    });
-
-    const _titleSmallCurrency = Title.build({
-      classList: ["text-currency"],
-      textContent: user.currency,
-    });
-
-    const _joinSmallCurrency = Element({
-      typeElement: "div",
-      classList: ["join-currency"],
-      children: [_titleSmallCurrency, _amountSmallCurrency],
+      }), 
+      currency: props.currency,
     });
 
     const _progressBar = Element({
@@ -34,7 +19,7 @@ const ReserveCase = {
 
     const _titleReserve = Title.build({
       classList: ["title-middle", "bold"],
-      textContent: "Reserva",
+      textContent: props.name,
     });
 
     const _joinReserve = Element({
@@ -43,28 +28,18 @@ const ReserveCase = {
       children: [_titleReserve, _progressBar],
     });
 
-    const _iWallet2 = Element({
-      typeElement: "img",
-      classList: ["icon"],
-      src: Images.iwallet,
-    });
+    const _walletIcon = WalletIcon.build();
 
-    const _circle2 = Element({
-      typeElement: "div",
-      classList: ["default-circle"],
-      children: [_iWallet2],
-    });
-
-    const _joinCircleReserve = Element({
+    const _joinIconReserve = Element({
       typeElement: "div",
       classList: ["join-icon-progress"],
-      children: [_circle2, _joinReserve],
+      children: [_walletIcon, _joinReserve],
     });
 
     const _reserveCase = Element({
       typeElement: "div",
-      classList: ["wallet-case", "margin-button"],
-      children: [_joinCircleReserve, _joinSmallCurrency],
+      classList: ["wallet-case"],
+      children: [_joinIconReserve, _smallCurrency],
     });
 
     return _reserveCase;

@@ -6,11 +6,14 @@ import ValueTotal from "../../components/valueTotal/index.js";
 import ScrollBox from "../../components/ScrollBox/index.js";
 import MiddleBox from "../../components/MiddleBox/index.js";
 import WalletCase from "../../components/WalletCase/index.js";
-import ReserveCase from "../../components/reserveCase/index.js";
 import Button from "../../components/shared/Button/index.js";
 import Styles from "../../utils/import/css/index.js";
 import Links from "../../utils/import/css/data/index.js";
 import db_Bills from "../../components/data/index.js";
+import GoalModal from "../modals/goal-modal/index.js";
+import printGoal from "../../modules/printGoal/index.js";
+import Element from "../../components/element/index.js";
+import printWallet from "../../modules/printWallet/index.js";
 
 const Home = {
   build: () => {
@@ -21,30 +24,40 @@ const Home = {
     const _footer = Footer.build();
 
     const _button = Button.build({
+      classList: ["default-button"],
       textContent: "Nova Meta",
     });
 
     _button.addEventListener("click", () => {
-      console.error("include modal in this function");
-    });
+      const $container = document.querySelector(".container");
 
-    const _reserveCase = ReserveCase.build();
+      _scrollBox.classList.add("inactive");
+
+      const goalModal = GoalModal.build();
+
+      $container.appendChild(goalModal);
+    });
 
     const _titleGoal = Title.build({
       classList: ["title", "margin-title"],
       textContent: "Metas",
     });
 
-    const _goalBox = MiddleBox.build({
-      children: [_titleGoal, _reserveCase, _button],
+    const _wrapperCases = Element({
+      typeElement: "div",
+      attribute: {
+        id: "wrapper-cases",
+      },
     });
 
-    const _walletCase = WalletCase.build({
-      classList: ["wallet-case"],
+    const _goalBox = MiddleBox.build({
+      children: [_titleGoal, _wrapperCases, _button],
     });
 
     const _walletBox = MiddleBox.build({
-      children: [_walletCase],
+      attribute: {
+        id: "wallet-case",
+      },
     });
 
     const _scrollBox = ScrollBox.build({
@@ -66,6 +79,9 @@ const Home = {
     const _container = Container.build({
       children: [_amoutBox, _scrollBox, _footer],
     });
+
+    printGoal(2);
+    printWallet(2);
 
     return _container;
   },

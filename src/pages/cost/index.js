@@ -5,6 +5,7 @@ import Element from "../../components/element/index.js";
 import Footer from "../../components/Footer/index.js";
 import Keyboard from "../../components/Keyboard/index.js";
 import Nav from "../../components/Nav/index.js";
+import Button from "../../components/shared/Button/index.js";
 import ValueTotalNegative from "../../components/ValueTotalNegative/index.js";
 import Links from "../../utils/import/css/data/index.js";
 import Styles from "../../utils/import/css/index.js";
@@ -15,8 +16,7 @@ const Cost = {
 
     const _footer = Footer.build();
 
-    const _button = Element({
-      typeElement: "button",
+    const _button = Button.build({
       classList: ["default-button"],
       textContent: "Continuar",
     });

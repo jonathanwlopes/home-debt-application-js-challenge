@@ -6,6 +6,7 @@ const Title = {
       typeElement: "span",
       classList: props.classList,
       textContent: props.textContent,
+      attribute: props.attribute
     });
 
     return _title;

@@ -1,4 +1,3 @@
-import db_Bills from "../data/index.js";
 import Element from "../element/index.js";
 import SmallCurrency from "../shared/SmallCurrency/index.js";
 import WalletIcon from "../shared/WalletIcon/index.js";
@@ -6,26 +5,20 @@ import Title from "../Title/index.js";
 
 const WalletCase = {
   build: (props) => {
-
-    const user = db_Bills.getUserById(2)
-    const wallet = db_Bills.getWalletById(2,100)
     
-
     const _smallCurrency = SmallCurrency.build({
-      value: wallet.credit.toLocaleString("pt-br", {
-        minimumFractionDigits: 2,
-      }),
-      currency: user.currency
+      value: props.value,
+      currency: props.currency
     });
 
     const _walletSubTitle = Title.build({
       classList: ["sub-title-middle"],
-      textContent: wallet.bank,
+      textContent: props.bank,
     });
 
     const _walletTitle = Title.build({
       classList: ["title-middle", "bold"],
-      textContent: wallet.type,
+      textContent: props.type
     });
 
     const _joinText = Element({
@@ -44,7 +37,7 @@ const WalletCase = {
 
     const _walletCase = Element({
       typeElement: "div",
-      classList: props.classList,
+      classList: ["wallet-case"],
       children: [_joinIconText, _smallCurrency],
     });
 

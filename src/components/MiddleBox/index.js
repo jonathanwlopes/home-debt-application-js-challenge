@@ -6,6 +6,7 @@ const MiddleBox = {
       typeElement: "div",
       classList: ["middle-box"],
       children: props.children,
+      attribute: props.attribute
     });
 
     return _middleBox;
