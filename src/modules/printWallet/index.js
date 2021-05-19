@@ -4,7 +4,6 @@ import WalletCase from "../../components/WalletCase/index.js";
 const printWallet = () => {
   const $walletCase = document.querySelector("#wallet-case");
   $walletCase.textContent = "";
-  console.log($walletCase);
 
   const user = db_Bills.getUserById(2);
   const walletList = db_Bills.getWallets(2);
@@ -20,7 +19,6 @@ const printWallet = () => {
     });
 
     $walletCase.appendChild(newWallet);
-
   });
 };
 

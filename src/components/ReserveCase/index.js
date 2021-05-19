@@ -8,7 +8,7 @@ const ReserveCase = {
     const _smallCurrency = SmallCurrency.build({
       value: props.totalValue.toLocaleString("pt-br", {
         minimumFractionDigits: 2,
-      }), 
+      }),
       currency: props.currency,
     });
 

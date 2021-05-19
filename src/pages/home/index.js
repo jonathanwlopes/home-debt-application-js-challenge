@@ -14,6 +14,7 @@ import GoalModal from "../modals/goal-modal/index.js";
 import printGoal from "../../modules/printGoal/index.js";
 import Element from "../../components/element/index.js";
 import printWallet from "../../modules/printWallet/index.js";
+import fillProgress from "../../modules/fillProgress/index.js";
 
 const Home = {
   build: () => {
@@ -82,6 +83,7 @@ const Home = {
 
     printGoal(2);
     printWallet(2);
+    fillProgress();
 
     return _container;
   },

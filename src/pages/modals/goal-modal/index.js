@@ -6,6 +6,7 @@ import ModalBox from "../../../components/ModalBox/index.js";
 import Button from "../../../components/shared/Button/index.js";
 import Input from "../../../components/shared/Input/index.js";
 import TypedCase from "../../../components/TypedCase/index.js";
+import fillProgress from "../../../modules/fillProgress/index.js";
 import printGoal from "../../../modules/printGoal/index.js";
 import generateId from "../../../utils/generateID/index.js";
 import Links from "../../../utils/import/css/data/index.js";
@@ -31,15 +32,20 @@ const GoalModal = {
       const dateGoal = $dateGoal.value;
       const valueTyped = Number($valueTyped.value);
 
-      db_Bills.createGoal(2, {
-        _id: generateId(),
-        name: nameGoal,
-        totalValue: valueTyped,
-        amountValue: 0,
-        date: dateGoal,
-      });
+      if (nameGoal && dateGoal && valueTyped !== "") {
+        db_Bills.createGoal(2, {
+          _id: generateId(),
+          name: nameGoal,
+          totalValue: valueTyped,
+          amountValue: 0,
+          date: dateGoal,
+        });
+      } else {
+        console.error("fill in all fields");
+      }
 
       printGoal(2);
+      fillProgress();
 
       $scrollBox.classList.remove("inactive");
       $modalBox.remove();

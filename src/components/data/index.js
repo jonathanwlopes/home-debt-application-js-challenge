@@ -97,14 +97,14 @@ const db_Bills = {
         {
           _id: 5000,
           name: "Casa",
-          totalValue: 90000,
-          amountValue: 2000,
+          totalValue: 100,
+          amountValue: 25,
         },
         {
           _id: 5001,
           name: "Mobilia",
-          totalValue: 6000,
-          amountValue: 3000,
+          totalValue: 100,
+          amountValue: 50,
         },
       ],
     },
