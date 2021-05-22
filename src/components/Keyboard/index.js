@@ -1,4 +1,4 @@
-import printTyped from "../../utils/printTyped/index.js";
+import printTyped from "../../modules/printTyped/index.js";
 import Images from "../assets/img/index.js";
 import Element from "../element/index.js";
 import Button from "../shared/Button/index.js";

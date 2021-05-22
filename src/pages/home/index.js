@@ -5,7 +5,6 @@ import AmountBox from "../../components/AmoutBox/index.js";
 import ValueTotal from "../../components/valueTotal/index.js";
 import ScrollBox from "../../components/ScrollBox/index.js";
 import MiddleBox from "../../components/MiddleBox/index.js";
-import WalletCase from "../../components/WalletCase/index.js";
 import Button from "../../components/shared/Button/index.js";
 import Styles from "../../utils/import/css/index.js";
 import Links from "../../utils/import/css/data/index.js";

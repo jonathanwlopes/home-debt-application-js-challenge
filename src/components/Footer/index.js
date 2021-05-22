@@ -14,9 +14,24 @@ const Footer = {
       classList: ["icon"],
       src: Images.credit,
     });
+
+    _iCredit.addEventListener("click", () => {
+      window.open(
+        "http://127.0.0.1:5500/src/pages-dinamic/cost/index.html",
+        "_top"
+      );
+    });
+
     const _circle = Element({
       typeElement: "div",
       classList: ["home-circle"],
+    });
+
+    _circle.addEventListener("click", () => {
+      window.open(
+        "http://127.0.0.1:5500/src/pages-dinamic/home/index.html",
+        "_top"
+      );
     });
 
     const _iStatement = Element({
@@ -25,10 +40,27 @@ const Footer = {
       src: Images.statement,
     });
 
+    _iStatement.addEventListener("click", () => {
+      window.open(
+        "http://127.0.0.1:5500/src/pages-dinamic/bills/index.html",
+        "_top"
+      );
+    });
+
     const _iHome = Element({
       typeElement: "img",
       classList: ["icon"],
       src: Images.home,
+      attribute: {
+        target: "_blank",
+      },
+    });
+
+    _iHome.addEventListener("click", () => {
+      window.open(
+        "http://127.0.0.1:5500/src/pages-dinamic/home/index.html",
+        "_top"
+      );
     });
 
     const _footerBox = Element({
