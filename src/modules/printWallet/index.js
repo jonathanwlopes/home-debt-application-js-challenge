@@ -10,6 +10,7 @@ const printWallet = () => {
 
   walletList.forEach((wallet) => {
     const newWallet = WalletCase.build({
+      classList: ["wallet-case"],
       value: wallet.credit.toLocaleString("pt-br", {
         minimumFractionDigits: 2,
       }),

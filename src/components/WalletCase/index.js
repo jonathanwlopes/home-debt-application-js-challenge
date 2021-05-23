@@ -37,7 +37,7 @@ const WalletCase = {
 
     const _walletCase = Element({
       typeElement: "div",
-      classList: ["wallet-case"],
+      classList: props.classList,
       children: [_joinIconText, _smallCurrency],
     });
 

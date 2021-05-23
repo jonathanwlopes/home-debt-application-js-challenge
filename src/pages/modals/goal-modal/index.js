@@ -6,6 +6,7 @@ import ModalBox from "../../../components/ModalBox/index.js";
 import Button from "../../../components/shared/Button/index.js";
 import Input from "../../../components/shared/Input/index.js";
 import TypedCase from "../../../components/TypedCase/index.js";
+import ValueTyped from "../../../components/ValueTyped/index.js";
 import fillProgress from "../../../modules/fillProgress/index.js";
 import printGoal from "../../../modules/printGoal/index.js";
 import generateId from "../../../utils/generateID/index.js";
@@ -53,7 +54,18 @@ const GoalModal = {
 
     const _keyboard = Keyboard.build();
 
-    const _typedCase = TypedCase.build();
+    const _valueTyped = ValueTyped.build({
+      classList: ["value-typed"],
+      attribute: {
+        id: "value-typed",
+        placeholder: "Digite o valor",
+      },
+    });
+    
+    const _typedCase = TypedCase.build({
+      classList: ["typed-case", "typed-case-background"],
+      children: [_valueTyped],
+    });
 
     const _endGoalCase = EndGoalCase.build();
 

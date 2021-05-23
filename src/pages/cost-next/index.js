@@ -39,6 +39,10 @@ const CostNext = {
 
     const _walletCase = WalletCase.build({
       classList: ["wallet-case", "blue"],
+      type: 'Poupança',
+      bank: 'Itau',
+      currency: '$',
+      value: '50.000,00'
     });
 
     const _fieldCase = FieldCase.build();

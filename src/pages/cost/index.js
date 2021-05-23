@@ -1,7 +1,6 @@
 import AmountBox from "../../components/AmoutBox/index.js";
 import Container from "../../components/Container/index.js";
 import CostBox from "../../components/CostBox/index.js";
-import Element from "../../components/element/index.js";
 import Footer from "../../components/Footer/index.js";
 import Keyboard from "../../components/Keyboard/index.js";
 import Nav from "../../components/Nav/index.js";
@@ -19,6 +18,17 @@ const Cost = {
     const _button = Button.build({
       classList: ["default-button"],
       textContent: "Continuar",
+    });
+
+    _button.addEventListener("click", () => {
+      const $valueTyped = document.querySelector("#value-typed");
+
+      if (!$valueTyped.value) return;
+
+      window.open(
+        "http://127.0.0.1:5500/src/pages-dinamic/cost-next/index.html",
+        "_top"
+      );
     });
 
     const _keyboard = Keyboard.build();
