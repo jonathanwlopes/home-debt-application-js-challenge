@@ -31,7 +31,7 @@ const GoalModal = {
 
       const nameGoal = $nameGoal.value;
       const dateGoal = $dateGoal.value;
-      const valueTyped = Number($valueTyped.value);
+      const valueTyped = $valueTyped.textContent;
 
       if (nameGoal && dateGoal && valueTyped !== "") {
         db_Bills.createGoal(2, {

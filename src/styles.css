@@ -234,8 +234,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 49px;
-  height: 24px;
+  height: 1.5rem;
+  padding: 0.3rem;
   background: #53a9ff 0% 0% no-repeat padding-box;
   border: 1px solid #53a9ff8f;
   border-radius: 7px;
@@ -244,6 +244,7 @@
 
 .tag-content .title-small {
   color: #f5faff;
+  margin-right: 0.5rem;
 }
 
 .tag-content .close {
@@ -476,6 +477,10 @@
   animation-duration: 1000ms;
 }
 
+.inactive {
+  display: none;
+}
+
 @keyframes zoom {
   from {
     width: 25px;
@@ -495,6 +500,17 @@
   opacity: 1;
   padding-left: 1rem;
   color: #707070;
+}
+
+.input-insert-tag {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 0.1px solid #53a9ff;
+  border-radius: 0.3rem;
+  opacity: 1;
+  padding-left: 0.3rem;
+  color: #707070;
+  width: 90%;
+  cursor: pointer;
 }
 
 .width-big {
@@ -747,7 +763,7 @@
   background-color: #53a9ff38;
 }
 
-.value-typed{
+.value-typed {
   border: none;
   color: #53a9ff;
   background-color: transparent;

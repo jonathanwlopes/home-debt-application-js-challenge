@@ -79,18 +79,30 @@ const db_Bills = {
       ],
       bills: [
         {
-          _id: 200,
-          type: "Luz",
-          value: 200,
+          _id: 201,
+          typePay: "Cartão",
+          totalValue: 200,
           dueDate: new Date(2021, 11, 17),
           pay: false,
+          parcel: {
+            splitValue: true,
+            amountSplit: 2,
+          },
+          tag: ["Sapatos", "Roupas"],
+          obs: "Vestimentas para comemoração do Ano Novo.",
         },
         {
-          _id: 201,
-          type: "Água",
+          _id: 200,
+          typePay: "Cartão",
+          totalValue: 200,
           dueDate: new Date(2021, 11, 17),
-          value: 100,
           pay: false,
+          parcel: {
+            splitValue: true,
+            amountSplit: 2,
+          },
+          tag: ["Sapatos", "Roupas"],
+          obs: "Vestimentas para comemoração do Ano Novo.",
         },
       ],
       goals: [
@@ -195,8 +207,6 @@ const db_Bills = {
     goalList.push(goal);
 
     user.goals = [...goalList];
-
-    console.log(goalList);
   },
 
   getBills: (userId) => {
@@ -213,6 +223,13 @@ const db_Bills = {
     const bills = billsList.find((bills) => bills._id === billsId);
 
     return bills;
+  },
+
+  createBills: (userId, newBills) => {
+    const user = db_Bills.getUserById(userId);
+    user.bills.push(newBills);
+    console.log(user);
+    return user;
   },
 };
 

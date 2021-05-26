@@ -1,6 +1,7 @@
 import AmountBox from "../../components/AmoutBox/index.js";
 import Container from "../../components/Container/index.js";
 import CostBox from "../../components/CostBox/index.js";
+import db_Bills from "../../components/data/index.js";
 import Footer from "../../components/Footer/index.js";
 import Keyboard from "../../components/Keyboard/index.js";
 import Nav from "../../components/Nav/index.js";
@@ -13,6 +14,8 @@ const Cost = {
   build: () => {
     Styles({ value: [Links.global, Links.styles] });
 
+    console.log(db_Bills.userList);
+
     const _footer = Footer.build();
 
     const _button = Button.build({
@@ -23,12 +26,14 @@ const Cost = {
     _button.addEventListener("click", () => {
       const $valueTyped = document.querySelector("#value-typed");
 
-      if (!$valueTyped.value) return;
+      if (
+        !$valueTyped.textContent ||
+        $valueTyped.textContent === "Digite o valor"
+      )
+        return;
 
-      window.open(
-        "http://127.0.0.1:5500/src/pages-dinamic/cost-next/index.html",
-        "_top"
-      );
+      location.href =
+        "http://127.0.0.1:5500/src/pages-dinamic/cost-next/index.html";
     });
 
     const _keyboard = Keyboard.build();

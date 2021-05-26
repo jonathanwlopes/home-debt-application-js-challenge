@@ -30,7 +30,6 @@ const Nav = {
       children: [_ul],
     });
 
-
     return _nav;
   },
 };

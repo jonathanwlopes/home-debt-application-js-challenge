@@ -22,8 +22,11 @@ const DateParcelCase = {
 
     const _tickOk = Element({
       typeElement: "img",
-      classList: ["icon"],
+      classList: ["icon", "inactive"],
       src: Images.tick,
+      attribute: {
+        id: "tick",
+      },
     });
 
     const _tick = Element({
@@ -32,19 +35,35 @@ const DateParcelCase = {
       children: [_tickOk],
     });
 
-    const _input2 = Element({
+    const _parcel = Element({
       typeElement: "input",
       classList: ["input-default"],
       attribute: {
-        type: "text",
+        type: "number",
         placeholder: "1 Vez",
+        id: "parcel",
+        disabled: "",
+        min: 1,
+        max: 12,
       },
+    });
+
+    _tick.addEventListener("click", () => {
+      if (!_tickOk.classList.contains("inactive")) {
+        _parcel.value = "";
+      }
+
+      _tickOk.classList.toggle("inactive");
+
+      _tickOk.classList.contains("inactive")
+        ? _parcel.setAttribute("disabled", "disabled")
+        : _parcel.removeAttribute("disabled");
     });
 
     const _wapperParcel = Element({
       typeElement: "div",
       classList: ["wrapper-parcel"],
-      children: [_input2, _tick, _joinText3],
+      children: [_parcel, _tick, _joinText3],
     });
 
     const _titleParcel = Title.build({
@@ -58,11 +77,12 @@ const DateParcelCase = {
       children: [_titleParcel, _wapperParcel],
     });
 
-    const _input = Element({
+    const _date = Element({
       typeElement: "input",
       classList: ["input-default"],
       attribute: {
         type: "date",
+        id: "date",
       },
     });
 
@@ -74,7 +94,7 @@ const DateParcelCase = {
     const _joinDate = Element({
       typeElement: "div",
       classList: ["join-date"],
-      children: [_titleDate, _input],
+      children: [_titleDate, _date],
     });
 
     const _dateParcelCase = Element({

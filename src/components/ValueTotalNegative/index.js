@@ -4,11 +4,13 @@ import ValueTyped from "../ValueTyped/index.js";
 
 const ValueTotalNegative = {
   build: () => {
+
     const _valueTyped = ValueTyped.build({
       classList: ["value-typed", "negative-color", "bold"],
+      textContent: "Digite o valor",
       attribute: {
         id: "value-typed",
-        placeholder: "Digite o valor",
+
       },
     });
 

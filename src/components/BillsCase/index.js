@@ -14,7 +14,7 @@ const BillsCase = {
 
     const _titleSmallCurrency = Title.build({
       classList: ["title-middle", "bold"],
-      textContent: bills.value.toLocaleString("pt-br", {
+      textContent: bills.totalValue.toLocaleString("pt-br", {
         minimumFractionDigits: 2,
       }), 
     });

@@ -1,22 +1,23 @@
 import Element from "../element/index.js";
 import Title from "../Title/index.js";
+import ValueTyped from "../ValueTyped/index.js";
 
 const FieldCase = {
-  build: () => {
-    const _amountCurrency = Title.build({
-      classList: ["text-amount"],
-      textContent: "100.000,00",
+  build: (props) => {
+    const _valueTyped = ValueTyped.build({
+      classList: ["typed-case"],
+      textContent: `R$ ${props.textContent}`,
+      attribute: {
+        id: "typed",
+      },
     });
 
-    const _titleCurrency = Title.build({
-      classList: ["text-currency"],
-      textContent: "R$",
-    });
+
 
     const _joinCurrency = Element({
       typeElement: "div",
       classList: ["join-currency"],
-      children: [_titleCurrency, _amountCurrency],
+      children: [_valueTyped],
     });
 
     const _close = Title.build({
@@ -24,13 +25,20 @@ const FieldCase = {
       textContent: "X",
     });
 
-    const _fieldCase = Element({
+    _close.addEventListener("click", () => {
+      window.open(
+        "http://127.0.0.1:5500/src/pages-dinamic/cost/index.html",
+        "_top"
+      );
+    });
+
+    const _valueCase = Element({
       typeElement: "div",
       classList: ["typed-case"],
       children: [_close, _joinCurrency],
     });
 
-    return _fieldCase;
+    return _valueCase;
   },
 };
 
